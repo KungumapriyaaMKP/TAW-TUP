@@ -1,16 +1,48 @@
-import { Target, Lightbulb, Award, Users, GraduationCap, Brain, BookOpen, ClipboardCheck, ArrowRight } from 'lucide-react';
+import { Target, Lightbulb, Award, Users, GraduationCap, Brain, BookOpen, ClipboardCheck, ArrowRight, CheckCircle2, BookOpenCheck, Sparkles, ShieldCheck } from 'lucide-react';
 import './About.css';
 import galleryImg1 from '../assets/our gallery/2026-02-18.webp';
 import galleryImg2 from '../assets/our gallery/unnamed (5).webp';
 
 const About = () => {
   const missionPoints = [
-    "High-quality NEET coaching with strong conceptual clarity.",
-    "Disciplined and highly motivating learning environment.",
-    "Personal mentorship, guidance, and strategic preparation.",
-    "Building confidence, consistency, and competitive spirit.",
-    "Empowering students of all backgrounds to become doctors.",
-    "Smart learning techniques, regular testing, and performance analysis."
+    "To provide high-quality NEET coaching with conceptual clarity.",
+    "To build strong academic foundations in Physics, Chemistry, and Biology.",
+    "To guide students with smart preparation strategies and regular assessments.",
+    "To create disciplined, confident, and motivated NEET aspirants.",
+    "To deliver consistent results through personalized mentoring and performance tracking."
+  ];
+
+  const features = [
+    {
+      title: "Expert NEET Coaching Faculty",
+      desc: "Our experienced faculty members provide in-depth conceptual teaching aligned with the latest NEET syllabus and NTA exam pattern. We focus on simplifying complex topics and improving problem-solving speed and accuracy.",
+      icon: <Users size={28} />
+    },
+    {
+      title: "Structured Study Materials",
+      desc: "TOPPERS ACADEMY provides well-designed study materials, chapter-wise notes, NEET question banks, MCQs, previous year question papers, and intensive revision modules for effective preparation.",
+      icon: <BookOpenCheck size={28} />
+    },
+    {
+      title: "Regular NEET Mock Tests & Analysis",
+      desc: "We conduct Weekly Tests, Grand Tests, Full-Length NEET Mock Exams, and Performance Analysis Sessions. These tests help students improve confidence, reduce exam fear, and master time management.",
+      icon: <ClipboardCheck size={28} />
+    },
+    {
+      title: "Personalized Student Mentorship",
+      desc: "Every student receives individual attention, motivation, academic monitoring, and strategic guidance to maximize performance and unlock their true scoring potential.",
+      icon: <Brain size={28} />
+    },
+    {
+      title: "Foundation Courses",
+      desc: "We offer strong foundation programs for school students from lower classes aiming to build early preparation for NEET, JEE, Olympiads, and other competitive exams.",
+      icon: <GraduationCap size={28} />
+    },
+    {
+      title: "Student-Centric Environment",
+      desc: "Our academy provides a motivating classroom environment, dedicated doubt-clearing sessions, daily practice assignments, and parent performance updates.",
+      icon: <ShieldCheck size={28} />
+    }
   ];
 
   return (
@@ -19,17 +51,17 @@ const About = () => {
         
         {/* Section Header */}
         <div className="about-header text-center mb-5">
-          <div className="about-header-badge">ESTABLISHED PRESTIGE</div>
-          <h1>About <span className="text-accent">Toppers Academy</span></h1>
+          <div className="about-header-badge">ESTABLISHED 2016</div>
+          <h1>About Us – <span className="text-accent">TOPPERS ACADEMY</span> Tiruppur</h1>
           <p className="about-main-subtitle text-light">
-            We are dedicated to transforming ambitious students into successful medical professionals through excellence in NEET coaching, disciplined learning, and personalized mentorship.
+            TOPPERS ACADEMY Tiruppur – Trusted NEET Coaching Centre Since 2016
           </p>
         </div>
 
-        {/* Block A: Overlapping Images & The Institution */}
+        {/* Block A: Overlapping Images & Welcome Text */}
         <div className="about-hero-grid mb-5">
           
-          {/* Left Column: Multi-Layered Overlapping Glass Image Card */}
+          {/* Left Column: Image Showcase */}
           <div className="about-image-showcase">
             <div className="about-image-wrapper primary-image-card">
               <img 
@@ -43,23 +75,22 @@ const About = () => {
             <div className="about-image-wrapper secondary-image-card">
               <img 
                 src={galleryImg2} 
-                alt="Students at Toppers Academy" 
+                alt="Students studying at Toppers Academy" 
                 className="about-showcase-img"
               />
-
             </div>
           </div>
 
-          {/* Right Column: Corporate Description & Stats Grid */}
+          {/* Right Column: Text & Stats */}
           <div className="about-intro-stack">
             <div className="about-intro-content">
-              <span className="about-sub-label">WHO WE ARE</span>
-              <h2>Empowering the Next Generation of Medical Leaders</h2>
+              <span className="about-sub-label">WELCOME TO TOPPERS ACADEMY</span>
+              <h2>Empowering Future Doctors Through Disciplined Guidance</h2>
               <p>
-                At Toppers Academy, we believe that success in NEET is built on a foundation of absolute conceptual clarity, rigorous practice, and an indomitable self-belief. Located in the heart of Tirupur, we provide a structured pathway for students to navigate the competitive medical entrance ecosystem with confidence and grit.
+                Welcome to TOPPERS ACADEMY Tiruppur, one of the leading and result-oriented coaching institutes for NEET, Medical Entrance Exam Preparation, Foundation Courses, and Competitive Exam Training in Tiruppur. Established in 2016, our academy was founded with a clear mission — to create future doctors through disciplined guidance, conceptual learning, and consistent mentorship.
               </p>
               <p>
-                Our specialized coaching model is engineered to remove the intimidation from complex scientific topics, combining highly experienced faculty with advanced interactive smart learning tools and personalized doubt-solving setups.
+                Over the years, TOPPERS ACADEMY has become a trusted name among students and parents searching for the best NEET coaching centre in Tiruppur. With a student-focused approach, experienced faculty team, structured study materials, regular mock tests, and personalized mentoring, we help students achieve academic excellence and secure admissions in top medical colleges across India.
               </p>
             </div>
 
@@ -70,8 +101,8 @@ const About = () => {
                   <Award size={24} />
                 </div>
                 <div className="stat-details">
-                  <h3>10+ Years</h3>
-                  <p>Coaching Excellence</p>
+                  <h3>Since 2016</h3>
+                  <p>Trusted Excellence</p>
                 </div>
               </div>
 
@@ -80,8 +111,8 @@ const About = () => {
                   <Users size={24} />
                 </div>
                 <div className="stat-details">
-                  <h3>500+ NEET</h3>
-                  <p>MBBS Seats Secured</p>
+                  <h3>1:1 Mentor</h3>
+                  <p>Personal Guidance</p>
                 </div>
               </div>
 
@@ -90,8 +121,8 @@ const About = () => {
                   <GraduationCap size={24} />
                 </div>
                 <div className="stat-details">
-                  <h3>98% Success</h3>
-                  <p>In Board Exams</p>
+                  <h3>Result-Oriented</h3>
+                  <p>Proven Success</p>
                 </div>
               </div>
 
@@ -100,64 +131,19 @@ const About = () => {
                   <Brain size={24} />
                 </div>
                 <div className="stat-details">
-                  <h3>1:1 Mentor</h3>
-                  <p>Personal Guidance</p>
+                  <h3>Mind Dynamics</h3>
+                  <p>Scientific Memory</p>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
-        {/* Block B: Core Educational Pillars Showcase */}
-        <div className="about-pillars-section mb-5">
-          <div className="about-pillars-header text-center mb-4">
-            <span className="about-sub-label">THE TOPPERS FORMULA</span>
-            <h2>Our Core Educational Pillars</h2>
-          </div>
-          
-          <div className="about-pillars-grid">
-            <div className="about-pillar-card">
-              <div className="pillar-icon-box">
-                <BookOpen size={28} />
-              </div>
-              <h3>Conceptual Rigor</h3>
-              <p>
-                Building a flawless foundation in Physics, Chemistry, and Biology. We focus on deep concept assimilation, enabling students to crack complex application-based problems easily.
-              </p>
-            </div>
-
-            <div className="about-pillar-card">
-              <div className="pillar-icon-box">
-                <Brain size={28} />
-              </div>
-              <h3>Mind Dynamics</h3>
-              <p>
-                Utilizing exclusive memory methods, scientific mnemonics, and mental focus techniques. We teach students how to learn massive biological definitions and complex equations quickly and retain them forever.
-              </p>
-              <a href="#mind-dynamics" className="pillar-link">
-                Click Here <ArrowRight size={16} />
-              </a>
-            </div>
-
-            <div className="about-pillar-card">
-              <div className="pillar-icon-box">
-                <ClipboardCheck size={28} />
-              </div>
-              <h3>Materials & Testing</h3>
-              <p>
-                Books will be provided, and weekly, monthly, and mock tests will be conducted to make students fear-free and fully exam-ready.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Block C: Core Values (Mission & Vision Grid) */}
-        <div className="about-grid">
-          
+        {/* Block B: Core Value Cards (Mission & Vision Grid) */}
+        <div className="about-grid mb-5">
           {/* Our Mission Card */}
           <div className="about-premium-card about-mission-card">
-            <div className="flex items-center gap-1" style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
               <div className="about-card-icon-wrapper">
                 <Target size={28} />
               </div>
@@ -175,22 +161,70 @@ const About = () => {
 
           {/* Our Vision Card */}
           <div className="about-premium-card about-vision-card">
-            <div className="flex items-center gap-1" style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
               <div className="about-card-icon-wrapper">
                 <Lightbulb size={28} />
               </div>
               <h2>Our Vision</h2>
             </div>
             <div className="about-vision-text">
-              <p>
-                To become a leading educational institution that transforms ambitious students into successful medical professionals through excellence in NEET coaching, disciplined learning, innovative teaching methods, and value-based mentorship.
+              <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#4b5563', margin: '2rem 0 0 0' }}>
+                To become the most trusted and innovative medical entrance coaching academy in Tamil Nadu, empowering students from every background to achieve their dream of becoming successful doctors and healthcare professionals.
               </p>
-              <p>
-                We envision creating a generation of confident achievers who contribute positively to society through knowledge, dedication, and service.
-              </p>
+              <div style={{ marginTop: '2.5rem', background: 'rgba(16, 185, 129, 0.04)', borderLeft: '4px solid #10b981', padding: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                <Sparkles size={20} style={{ color: '#10b981' }} />
+                <span style={{ fontWeight: '600', color: '#065f46', fontSize: '0.9rem' }}>Empowering Future Doctors Since 2016</span>
+              </div>
             </div>
           </div>
+        </div>
 
+        {/* Block C: Why Choose Toppers Academy (Features Grid) */}
+        <div className="about-pillars-section mb-5" style={{ background: '#f8fafc', padding: '4.5rem 3.5rem', border: '1px solid rgba(45, 52, 148, 0.04)' }}>
+          <div className="about-pillars-header text-center mb-5">
+            <span className="about-sub-label">WHY TOPPERS ACADEMY</span>
+            <h2>Why Students Choose TOPPERS ACADEMY Tiruppur</h2>
+          </div>
+          
+          <div className="about-pillars-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.2rem' }}>
+            {features.map((f, i) => (
+              <div className="about-pillar-card" key={i}>
+                <div className="pillar-icon-box">
+                  {f.icon}
+                </div>
+                <h3>{f.title}</h3>
+                <p>{f.desc}</p>
+                {f.title.includes("Mentorship") && (
+                  <a href="#mind-dynamics" className="pillar-link">
+                    Click Here <ArrowRight size={16} />
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Block D: Our Commitment & Direct Call-to-action */}
+        <div className="about-premium-card" style={{
+          background: 'linear-gradient(135deg, #2d3494 0%, #1e247a 100%)',
+          color: 'white',
+          padding: '4rem',
+          textAlign: 'center',
+          border: 'none',
+          boxShadow: '0 20px 40px rgba(45, 52, 148, 0.15)'
+        }}>
+          <span style={{ color: '#38bdf8', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem' }}>OUR COMMITMENT</span>
+          <h2 style={{ color: 'white', fontSize: '2.2rem', marginTop: '0.8rem', marginBottom: '1.2rem', fontFamily: 'var(--font-heading)' }}>
+            Producing Outstanding NEET Results Since 2016
+          </h2>
+          <p style={{ color: '#cbd5e1', maxWidth: '800px', margin: '0 auto 2.5rem auto', fontSize: '1.05rem', lineHeight: '1.7' }}>
+            Since 2016, TOPPERS ACADEMY Tiruppur has remained committed to producing outstanding NEET results and helping students achieve their medical career dreams. Our dedication, systematic coaching methodology, and student-first philosophy continue to inspire hundreds of aspirants every year.
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <a href="#contact" className="btn btn-primary" style={{ background: '#38bdf8', color: '#0f172a', fontWeight: '700', padding: '0.9rem 2.2rem', textDecoration: 'none', transition: 'all 0.3s ease', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+              Join TOPPERS ACADEMY Tiruppur <ArrowRight size={18} />
+            </a>
+          </div>
         </div>
 
       </div>
