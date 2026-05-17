@@ -3,6 +3,7 @@ import { Star } from 'lucide-react';
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [tilt, setTilt] = useState({ x: 0, y: 0, isHovered: false });
   const [screenSize, setScreenSize] = useState({
     isMobile: false,
     isTablet: false
@@ -81,6 +82,23 @@ const Testimonials = () => {
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const handleMouseMove = (e) => {
+    if (screenSize.isMobile) return;
+    const el = e.currentTarget;
+    const rect = el.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left - width / 2;
+    const mouseY = e.clientY - rect.top - height / 2;
+    const tiltX = -(mouseY / (height / 2)) * 25;
+    const tiltY = (mouseX / (width / 2)) * 25;
+    setTilt({ x: tiltX, y: tiltY, isHovered: true });
+  };
+
+  const handleMouseLeave = () => {
+    setTilt({ x: 0, y: 0, isHovered: false });
   };
 
   const getInitials = (name) => {
@@ -235,8 +253,15 @@ const Testimonials = () => {
           border-radius: 38px;
           border: 11px solid #1e293b;
           transform-style: preserve-3d;
-          transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+          transition: transform 0.1s ease-out, box-shadow 0.15s ease-out, border-color 0.3s ease;
           will-change: transform, box-shadow;
+        }
+        .mobile-3d-frame.floating {
+          animation: floatMobile3D 6s ease-in-out infinite;
+          transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-3d-frame:hover {
+          border-color: #3b82f6;
         }
         .mobile-screen-shine {
           position: absolute;
@@ -355,7 +380,9 @@ const Testimonials = () => {
           
           {/* Left Column: 3D Mobile Video Screen Mockup */}
           <div 
-            className={screenSize.isMobile ? "" : "mobile-3d-frame"}
+            className={screenSize.isMobile ? "" : `mobile-3d-frame ${!tilt.isHovered ? 'floating' : ''}`}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
             style={{
               flex: screenSize.isMobile ? '1' : '0 0 35%',
               width: screenSize.isMobile ? '100%' : '290px',
@@ -365,10 +392,17 @@ const Testimonials = () => {
               overflow: 'hidden',
               background: '#000',
               border: '11px solid #1e293b',
-              boxShadow: screenSize.isMobile ? '0 15px 30px rgba(0,0,0,0.15)' : undefined,
-              animation: screenSize.isMobile ? 'none' : 'floatMobile3D 6s ease-in-out infinite',
+              boxShadow: screenSize.isMobile 
+                ? '0 15px 30px rgba(0,0,0,0.15)' 
+                : tilt.isHovered
+                  ? `${-tilt.y * 1.5}px ${tilt.x * 1.5}px 60px rgba(59, 130, 246, 0.35), 0 0 0 1px rgba(59, 130, 246, 0.15)`
+                  : undefined,
+              transform: !screenSize.isMobile && tilt.isHovered
+                ? `perspective(1200px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale3d(1.06, 1.06, 1.06)`
+                : undefined,
               position: 'relative',
-              margin: screenSize.isMobile ? '0 auto' : undefined
+              margin: screenSize.isMobile ? '0 auto' : undefined,
+              cursor: 'pointer'
             }}
           >
             {/* Dynamic Island */}
@@ -395,7 +429,12 @@ const Testimonials = () => {
             )}
 
             {/* Screen shine reflection */}
-            <div className="mobile-screen-shine"></div>
+            <div 
+              className="mobile-screen-shine"
+              style={!screenSize.isMobile && tilt.isHovered ? {
+                background: `radial-gradient(circle at ${(tilt.y + 25) * 2}% ${(tilt.x + 25) * 2}%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 55%)`
+              } : {}}
+            ></div>
 
             {/* YouTube Shorts IFrame */}
             <iframe 

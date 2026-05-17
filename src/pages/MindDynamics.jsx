@@ -1,14 +1,89 @@
 import EnquiryForm from '../components/EnquiryForm';
 import { Brain } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 const MindDynamics = () => {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          // Reset when out of view so it re-animates on next scroll
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // 3D Roll animation styles
+  const roll3DStyle = `
+    @keyframes rollInLeft {
+      0% {
+        opacity: 0;
+        transform: perspective(1000px) rotateY(-90deg) translateX(-100px);
+      }
+      40% {
+        opacity: 0.6;
+        transform: perspective(1000px) rotateY(-20deg) translateX(-30px);
+      }
+      70% {
+        transform: perspective(1000px) rotateY(10deg) translateX(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: perspective(1000px) rotateY(0deg) translateX(0);
+      }
+    }
+
+    @keyframes rollInRight {
+      0% {
+        opacity: 0;
+        transform: perspective(1000px) rotateY(90deg) translateX(100px);
+      }
+      40% {
+        opacity: 0.6;
+        transform: perspective(1000px) rotateY(20deg) translateX(30px);
+      }
+      70% {
+        transform: perspective(1000px) rotateY(-10deg) translateX(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: perspective(1000px) rotateY(0deg) translateX(0);
+      }
+    }
+
+    .md-roll-right {
+      opacity: 0;
+      transform: perspective(1000px) rotateY(90deg) translateX(100px);
+      transition: none;
+    }
+    .md-roll-right.animate {
+      animation: rollInRight 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+  `;
+
   return (
-    <div className="section" style={{
+    <div className="section" ref={sectionRef} style={{
       background: 'linear-gradient(135deg, #2d3494 0%, #1e247a 100%)',
       color: 'white',
       position: 'relative',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      perspective: '1200px'
     }}>
+      <style>{roll3DStyle}</style>
+
       {/* Decorative Background Elements */}
       <div style={{
         position: 'absolute',
@@ -52,7 +127,10 @@ const MindDynamics = () => {
             </div>
           </div>
           
-          <div style={{flex: '0 0 315px'}}>
+          <div 
+            className={`md-roll-right ${isVisible ? 'animate' : ''}`}
+            style={{flex: '0 0 315px', transformStyle: 'preserve-3d'}}
+          >
             <div className="video-container-3d" style={{
               borderRadius: '24px', 
               overflow: 'hidden', 

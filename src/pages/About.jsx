@@ -1,5 +1,7 @@
 import { Target, Lightbulb, Award, Users, GraduationCap, Brain, BookOpen, ClipboardCheck } from 'lucide-react';
 import './About.css';
+import galleryImg1 from '../assets/our gallery/2026-02-18.webp';
+import galleryImg2 from '../assets/our gallery/unnamed (5).webp';
 
 const About = () => {
   const missionPoints = [
@@ -31,8 +33,8 @@ const About = () => {
           <div className="about-image-showcase">
             <div className="about-image-wrapper primary-image-card">
               <img 
-                src="/classroom_excellence.png" 
-                alt="State of the art Classroom Excellence" 
+                src={galleryImg1} 
+                alt="Smart Classes at Toppers Academy" 
                 className="about-showcase-img"
               />
               <div className="about-image-accent-glow"></div>
@@ -40,14 +42,11 @@ const About = () => {
             
             <div className="about-image-wrapper secondary-image-card">
               <img 
-                src="/medical_aspirants_studying.png" 
-                alt="Medical Coaching Aspirants Studying" 
+                src={galleryImg2} 
+                alt="Students at Toppers Academy" 
                 className="about-showcase-img"
               />
-              <div className="about-image-overlay-text">
-                <h4>Inspiring Greatness</h4>
-                <p>Securing Medical Seats 🩺</p>
-              </div>
+
             </div>
           </div>
 
