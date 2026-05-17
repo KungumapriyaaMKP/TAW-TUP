@@ -285,6 +285,7 @@ const Testimonials = () => {
         .testimonial-glow-card {
           background: rgba(255, 255, 255, 0.95);
           backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
           border: 1px solid rgba(45, 52, 148, 0.08);
           border-radius: 20px;
           box-shadow: 0 20px 40px -15px rgba(45, 52, 148, 0.12), 0 0 0 1px rgba(45, 52, 148, 0.03);
