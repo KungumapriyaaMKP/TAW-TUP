@@ -15,7 +15,9 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    // Proactively strip HTML control characters to prevent XSS script injection attacks
+    const sanitizedValue = (name === 'phone' || name === 'course') ? value : value.replace(/[<>'"/]/g, "");
+    setFormData({ ...formData, [name]: sanitizedValue });
     
     // Clear field-specific error as student types
     if (errors[name]) {
