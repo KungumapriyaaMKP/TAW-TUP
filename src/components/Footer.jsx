@@ -58,7 +58,7 @@ const Footer = () => {
           <ul className="footer-contact">
             <li className="flex gap-1" style={{ display: 'flex', gap: '0.5rem' }}>
               <MapPin size={20} style={{ color: '#f59e0b', flexShrink: 0 }} />
-              <span>AVP Layout, A.V.P Layout, Gandhinagar, Velampalayam, Tiruppur, Tamil Nadu 641603</span>
+              <span>A.V.P Layout, Gandhinagar, Velampalayam, Tiruppur, Tamil Nadu 641603</span>
             </li>
             <li className="flex gap-1 items-center" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
               <Phone size={20} style={{ color: '#f59e0b', flexShrink: 0 }} />
@@ -74,8 +74,10 @@ const Footer = () => {
       <div className="footer-bottom">
         <p className="text-center" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center', justifyContent: 'center' }}>
           <span>&copy; {new Date().getFullYear()} Toppers Academy. All Rights Reserved.</span>
-          <span style={{ fontSize: '0.85rem', opacity: '0.8' }}>
+          <span style={{ fontSize: '0.85rem', opacity: '0.8', display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
             Developed by <a href="https://www.linkedin.com/in/kungumapriyaa-m/" target="_blank" rel="noopener noreferrer" style={{ color: '#f59e0b', fontWeight: 'bold', textDecoration: 'underline' }}>Kungumapriyaa M</a>
+            <span>•</span>
+            <a href="mailto:kungumapriyaamkp5@gmail.com" style={{ color: '#f59e0b', textDecoration: 'none', fontWeight: '500' }}>kungumapriyaamkp5@gmail.com</a>
           </span>
         </p>
       </div>
