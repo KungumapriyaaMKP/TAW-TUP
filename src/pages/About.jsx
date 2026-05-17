@@ -59,9 +59,9 @@ const About = () => {
         {/* Section Header */}
         <div className="about-header text-center mb-5">
           <div className="about-header-badge">ESTABLISHED 2016</div>
-          <h1>About Us – <span className="text-accent">TOPPERS ACADEMY</span> Tiruppur</h1>
+          <h1>Toppers Academy - <span className="text-accent">NEET Coaching centre</span> in Tiruppur</h1>
           <p className="about-main-subtitle text-light">
-            TOPPERS ACADEMY Tiruppur – Trusted NEET Coaching Centre Since 2016
+            Toppers Academy - NEET Coaching centre in Tiruppur – Trusted Since 2016
           </p>
         </div>
 
