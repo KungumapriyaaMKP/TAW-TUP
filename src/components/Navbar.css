@@ -137,6 +137,7 @@
     align-items: center !important;
     width: 100% !important;
     padding: 0 1rem !important;
+    position: relative !important;
   }
 
   .navbar-logo {
@@ -144,22 +145,26 @@
     display: flex !important;
     justify-content: flex-start !important;
     align-items: center !important;
-    flex: 1.5 !important;
+    flex: 1 !important;
     margin: 0 !important;
   }
 
   .nav-btn-container {
     order: 2 !important;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     display: flex !important;
     justify-content: center !important;
-    flex: 1.2 !important;
+    align-items: center !important;
+    z-index: 10 !important;
   }
 
   .menu-icon {
     order: 3 !important;
     display: flex !important;
     justify-content: flex-end !important;
-    flex: 0.8 !important;
+    flex: 1 !important;
     background: transparent;
     border: none;
     cursor: pointer;
