@@ -72,7 +72,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p className="text-center">&copy; {new Date().getFullYear()} Toppers Academy. All Rights Reserved.</p>
+        <p className="text-center" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center', justifyContent: 'center' }}>
+          <span>&copy; {new Date().getFullYear()} Toppers Academy. All Rights Reserved.</span>
+          <span style={{ fontSize: '0.85rem', opacity: '0.8' }}>
+            Developed by <a href="https://www.linkedin.com/in/kungumapriyaa-m/" target="_blank" rel="noopener noreferrer" style={{ color: '#f59e0b', fontWeight: 'bold', textDecoration: 'underline' }}>Kungumapriyaa M</a>
+          </span>
+        </p>
       </div>
     </footer>
   );
