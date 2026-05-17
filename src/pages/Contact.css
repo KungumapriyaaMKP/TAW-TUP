@@ -27,9 +27,9 @@
 
 .contact-title-exact {
   font-family: var(--font-heading);
-  font-size: 3rem; /* Large elegant navy title */
+  font-size: 3rem; /* Large elegant website blue title */
   font-weight: 700;
-  color: #0b112c; /* Deep navy */
+  color: var(--primary-blue); /* Website primary blue */
   margin: 0 0 1.25rem 0;
   line-height: 1.2;
 }
