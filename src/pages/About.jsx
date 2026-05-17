@@ -7,6 +7,7 @@ import facultyImg from '../assets/our gallery/WhatsApp Image 2021-10-23 at 10.58
 import booksImg from '../assets/our gallery/coaching_books_materials.png';
 import omrImg from '../assets/our gallery/omr.webp';
 import mindDynamicsImg from '../assets/our gallery/mind dynamics.webp';
+import foundationCoursesImg from '../assets/our gallery/foundation courses.webp';
 
 const About = () => {
   const missionPoints = [
@@ -41,7 +42,7 @@ const About = () => {
     {
       title: "Foundation Courses",
       desc: "We offer strong foundation programs for school students from lower classes aiming to build early preparation for NEET, JEE, Olympiads, and other competitive exams.",
-      icon: <GraduationCap size={28} />
+      image: foundationCoursesImg
     },
     {
       title: "Student-Centric Environment",
