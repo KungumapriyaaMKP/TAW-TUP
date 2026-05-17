@@ -46,8 +46,8 @@ const About = () => {
       image: foundationCoursesImg
     },
     {
-      title: "Student-Centric Environment",
-      desc: "Our academy provides a motivating classroom environment, dedicated doubt-clearing sessions, daily practice assignments, and parent performance updates.",
+      title: "Hostel Facilities",
+      desc: "We provide highly secure, comfortable, and disciplined hostel accommodations with separate facilities for girls and boys, featuring hygienic boarding and structured study hours.",
       image: studentCentricImg
     }
   ];
