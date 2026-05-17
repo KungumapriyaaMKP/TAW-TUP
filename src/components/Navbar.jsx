@@ -43,6 +43,7 @@ const Navbar = () => {
           <a href="#results" className="nav-item" onClick={toggleMenu}>Results</a>
           <a href="#testimonials" className="nav-item" onClick={toggleMenu}>Testimonials</a>
           <a href="#gallery" className="nav-item" onClick={toggleMenu}>Gallery</a>
+          <a href="#faq" className="nav-item" onClick={toggleMenu}>FAQ</a>
           <a href="#contact" className="nav-item" onClick={toggleMenu}>Contact</a>
         </div>
 

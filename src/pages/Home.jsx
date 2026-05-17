@@ -5,6 +5,7 @@ import Results from './Results';
 import Testimonials from './Testimonials';
 import Gallery from './Gallery';
 import Contact from './Contact';
+import FAQ from '../components/FAQ';
 import './Home.css';
 
 const Home = () => {
@@ -41,6 +42,7 @@ const Home = () => {
       <div id="testimonials"><Testimonials /></div>
       <div id="about"><About /></div>
       <div id="gallery"><Gallery /></div>
+      <div id="faq"><FAQ /></div>
       <div id="contact"><Contact /></div>
     </div>
   );
