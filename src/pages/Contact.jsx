@@ -111,7 +111,7 @@ const Contact = () => {
                   <MapPin size={20} />
                 </div>
                 <div className="contact-details-exact">
-                  <h4>Office Location</h4>
+                  <h4>Institute Location</h4>
                   <p>A.V.P Layout, Gandhinagar, Velampalayam, Tiruppur, Tamil Nadu 641603</p>
                 </div>
               </div>
