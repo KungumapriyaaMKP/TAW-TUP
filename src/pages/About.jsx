@@ -87,10 +87,10 @@ const About = () => {
               <span className="about-sub-label">WELCOME TO TOPPERS ACADEMY</span>
               <h2>Empowering Future Doctors Through Disciplined Guidance</h2>
               <p>
-                Welcome to TOPPERS ACADEMY Tiruppur, one of the leading and result-oriented coaching institutes for NEET, Medical Entrance Exam Preparation, Foundation Courses, and Competitive Exam Training in Tiruppur. Established in 2016, our academy was founded with a clear mission — to create future doctors through disciplined guidance, conceptual learning, and consistent mentorship.
+                Welcome to <strong>TOPPERS ACADEMY Tiruppur</strong>, one of the leading and result-oriented coaching institutes for <strong>NEET, Medical Entrance Exam Preparation, Foundation Courses, and Competitive Exam Training</strong> in Tiruppur. Established in 2016, our academy was founded with a clear mission to <strong>create future doctors</strong> through <strong>disciplined guidance, conceptual learning, and consistent mentorship</strong>.
               </p>
               <p>
-                Over the years, TOPPERS ACADEMY has become a trusted name among students and parents searching for the best NEET coaching centre in Tiruppur. With a student-focused approach, experienced faculty team, structured study materials, regular mock tests, and personalized mentoring, we help students achieve academic excellence and secure admissions in top medical colleges across India.
+                Over the years, TOPPERS ACADEMY has become a <strong>trusted name</strong> among students and parents searching for the <strong>best NEET coaching centre in Tiruppur</strong>. With a <strong>student-focused approach, experienced faculty team, structured study materials, regular mock tests, and personalized mentoring</strong>, we help students achieve <strong>academic excellence</strong> and secure admissions in <strong>top medical colleges across India</strong>.
               </p>
             </div>
 
