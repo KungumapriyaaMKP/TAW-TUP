@@ -15,7 +15,7 @@ const Courses = () => {
           </p>
         </div>
 
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginBottom: '4rem'}}>
+        <div className="courses-grid" style={{marginBottom: '4rem'}}>
           {/* Course 1 */}
           <div className="feature-card" style={{aspectRatio: '1/1', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '1.5rem', justifyContent: 'space-between'}}>
             <div>

@@ -331,6 +331,10 @@ const Results = () => {
         }
 
         @media (max-width: 1024px) {
+          .results-slide-container {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
           .results-topper-card {
             grid-template-columns: 1fr;
           }

@@ -160,3 +160,22 @@ button {
   border-color: var(--primary-blue);
   box-shadow: 0 0 0 3px rgba(35, 53, 136, 0.1);
 }
+
+/* Responsive Courses Grid */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
