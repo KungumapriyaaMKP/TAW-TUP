@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container footer-grid">
         <div className="footer-col">
           <h3 className="footer-logo">
-            <span className="text-white">Toppers </span>
+            <span style={{ color: '#ffffff', fontWeight: 'bold' }}>Toppers </span>
             <span style={{ color: '#f59e0b', fontWeight: 'bold' }}>Academy</span>
           </h3>
           <p className="footer-desc">
