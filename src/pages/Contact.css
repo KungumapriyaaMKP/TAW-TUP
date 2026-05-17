@@ -262,7 +262,7 @@
 
 .contact-submit-button {
   width: 100%;
-  background-color: #0b112c; /* Exact solid navy background */
+  background-color: var(--primary-blue); /* Website primary blue */
   color: #ffffff;
   border: none;
   padding: 1.2rem;
@@ -277,10 +277,10 @@
 }
 
 .contact-submit-button:hover {
-  background-color: var(--accent-green);
+  background-color: var(--primary-blue-dark); /* Slightly darker website blue on hover */
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px -6px rgba(151, 192, 62, 0.4);
+  box-shadow: 0 12px 25px -6px rgba(45, 52, 148, 0.4);
 }
 
 .contact-submit-button:active {
