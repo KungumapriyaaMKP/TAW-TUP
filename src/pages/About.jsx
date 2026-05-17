@@ -3,6 +3,10 @@ import './About.css';
 import galleryImg1 from '../assets/our gallery/2026-02-18.webp';
 import galleryImg2 from '../assets/our gallery/unnamed (5).webp';
 
+import facultyImg from '../assets/our gallery/WhatsApp Image 2021-10-23 at 10.58.11 AM.webp';
+import booksImg from '../assets/our gallery/coaching_books_materials.png';
+import omrImg from '../assets/our gallery/omr.webp';
+
 const About = () => {
   const missionPoints = [
     "To provide high-quality NEET coaching with conceptual clarity.",
@@ -16,17 +20,17 @@ const About = () => {
     {
       title: "Expert NEET Coaching Faculty",
       desc: "Our experienced faculty members provide in-depth conceptual teaching aligned with the latest NEET syllabus and NTA exam pattern. We focus on simplifying complex topics and improving problem-solving speed and accuracy.",
-      icon: <Users size={28} />
+      image: facultyImg
     },
     {
       title: "Structured Study Materials",
       desc: "TOPPERS ACADEMY provides well-designed study materials, chapter-wise notes, NEET question banks, MCQs, previous year question papers, and intensive revision modules for effective preparation.",
-      icon: <BookOpenCheck size={28} />
+      image: booksImg
     },
     {
       title: "Regular NEET Mock Tests & Analysis",
       desc: "We conduct Weekly Tests, Grand Tests, Full-Length NEET Mock Exams, and Performance Analysis Sessions. These tests help students improve confidence, reduce exam fear, and master time management.",
-      icon: <ClipboardCheck size={28} />
+      image: omrImg
     },
     {
       title: "Personalized Student Mentorship",
@@ -188,17 +192,25 @@ const About = () => {
           
           <div className="about-pillars-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.2rem' }}>
             {features.map((f, i) => (
-              <div className="about-pillar-card" key={i}>
-                <div className="pillar-icon-box">
-                  {f.icon}
-                </div>
-                <h3>{f.title}</h3>
-                <p>{f.desc}</p>
-                {f.title.includes("Mentorship") && (
-                  <a href="#mind-dynamics" className="pillar-link">
-                    Click Here <ArrowRight size={16} />
-                  </a>
+              <div className="about-pillar-card" key={i} style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                {f.image ? (
+                  <div className="pillar-card-image-box">
+                    <img src={f.image} alt={f.title} className="pillar-card-image" />
+                  </div>
+                ) : (
+                  <div className="pillar-icon-box">
+                    {f.icon}
+                  </div>
                 )}
+                <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <h3>{f.title}</h3>
+                  <p style={{ flex: 1 }}>{f.desc}</p>
+                  {f.title.includes("Mentorship") && (
+                    <a href="#mind-dynamics" className="pillar-link">
+                      Click Here <ArrowRight size={16} />
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
