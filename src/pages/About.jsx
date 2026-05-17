@@ -141,9 +141,9 @@ const About = () => {
               <div className="pillar-icon-box">
                 <ClipboardCheck size={28} />
               </div>
-              <h3>Mock Testing</h3>
+              <h3>Materials & Testing</h3>
               <p>
-                Daily testing regimens combined with highly detailed performance tracking and mock OMR examinations. We simulate the high-pressure NEET environment to build confidence and speed.
+                Books will be provided, and weekly, monthly, and mock tests will be conducted to make students fear-free and fully exam-ready.
               </p>
             </div>
           </div>
