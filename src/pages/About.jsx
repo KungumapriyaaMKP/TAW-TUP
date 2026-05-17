@@ -1,4 +1,4 @@
-import { Target, Lightbulb, Award, Users, GraduationCap, Brain, BookOpen, ClipboardCheck } from 'lucide-react';
+import { Target, Lightbulb, Award, Users, GraduationCap, Brain, BookOpen, ClipboardCheck, ArrowRight } from 'lucide-react';
 import './About.css';
 import galleryImg1 from '../assets/our gallery/2026-02-18.webp';
 import galleryImg2 from '../assets/our gallery/unnamed (5).webp';
@@ -135,6 +135,9 @@ const About = () => {
               <p>
                 Utilizing exclusive memory methods, scientific mnemonics, and mental focus techniques. We teach students how to learn massive biological definitions and complex equations quickly and retain them forever.
               </p>
+              <a href="#mind-dynamics" className="pillar-link">
+                Click Here <ArrowRight size={16} />
+              </a>
             </div>
 
             <div className="about-pillar-card">

@@ -489,3 +489,25 @@
     gap: 1rem;
   }
 }
+
+/* Pillar Link Styling */
+.pillar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-decoration: none;
+  font-size: 0.88rem;
+  margin-top: 1.2rem;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.pillar-link:hover {
+  color: var(--accent-green);
+  border-bottom-color: var(--accent-green);
+  transform: translateX(4px);
+}
