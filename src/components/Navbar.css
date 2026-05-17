@@ -122,9 +122,19 @@
 .menu-icon {
   display: none;
   color: var(--primary-blue);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 992px) {
+  .navbar-container {
+    padding: 0 1.25rem;
+  }
+
   .nav-links-container {
     position: absolute;
     top: 100%;
@@ -145,6 +155,23 @@
   }
   
   .menu-icon {
-    display: block;
+    display: flex;
+  }
+}
+
+/* Hide brand name text on narrow screens so they never squish together */
+@media (max-width: 576px) {
+  .logo-text {
+    display: none !important;
+  }
+  .navbar-container {
+    padding: 0 0.75rem;
+  }
+  .nav-cta {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
+  .menu-icon {
+    padding: 0.25rem;
   }
 }
