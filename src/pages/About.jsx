@@ -8,6 +8,7 @@ import booksImg from '../assets/our gallery/coaching_books_materials.png';
 import omrImg from '../assets/our gallery/omr.webp';
 import mindDynamicsImg from '../assets/our gallery/mind dynamics.webp';
 import foundationCoursesImg from '../assets/our gallery/foundation courses.webp';
+import studentCentricImg from '../assets/our gallery/student centric environment.png';
 
 const About = () => {
   const missionPoints = [
@@ -47,7 +48,7 @@ const About = () => {
     {
       title: "Student-Centric Environment",
       desc: "Our academy provides a motivating classroom environment, dedicated doubt-clearing sessions, daily practice assignments, and parent performance updates.",
-      icon: <ShieldCheck size={28} />
+      image: studentCentricImg
     }
   ];
 
