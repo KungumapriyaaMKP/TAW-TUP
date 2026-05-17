@@ -6,6 +6,7 @@ import galleryImg2 from '../assets/our gallery/unnamed (5).webp';
 import facultyImg from '../assets/our gallery/WhatsApp Image 2021-10-23 at 10.58.11 AM.webp';
 import booksImg from '../assets/our gallery/coaching_books_materials.png';
 import omrImg from '../assets/our gallery/omr.webp';
+import mindDynamicsImg from '../assets/our gallery/mind dynamics.webp';
 
 const About = () => {
   const missionPoints = [
@@ -35,7 +36,7 @@ const About = () => {
     {
       title: "Mind Dynamics",
       desc: "Utilizing exclusive memory methods, scientific mnemonics, and mental focus techniques. We teach students how to learn massive biological definitions and complex equations quickly and retain them forever.",
-      icon: <Brain size={28} />
+      image: mindDynamicsImg
     },
     {
       title: "Foundation Courses",
