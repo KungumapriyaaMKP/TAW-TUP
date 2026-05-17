@@ -112,7 +112,7 @@ const Contact = () => {
                 </div>
                 <div className="contact-details-exact">
                   <h4>Office Location</h4>
-                  <p>AVP Layout, A.V.P Layout, Gandhinagar, Velampalayam, Tiruppur, Tamil Nadu 641603</p>
+                  <p>A.V.P Layout, Gandhinagar, Velampalayam, Tiruppur, Tamil Nadu 641603</p>
                 </div>
               </div>
 

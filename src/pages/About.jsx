@@ -37,7 +37,7 @@ const About = () => {
     },
     {
       title: "Mind Dynamics",
-      desc: "Utilizing exclusive memory methods, scientific mnemonics, and mental focus techniques. We teach students how to learn massive biological definitions and complex equations quickly and retain them forever.",
+      desc: "We utilize exclusive memory methods, scientific mnemonics, and mental focus techniques to teach students how to learn massive biological definitions and complex equations quickly and retain them forever.",
       image: mindDynamicsImg
     },
     {

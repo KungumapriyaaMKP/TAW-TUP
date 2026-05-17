@@ -24,7 +24,7 @@ const Courses = () => {
               </div>
               <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', minHeight: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>NEET 11th & 12th Integrated</h3>
             </div>
-            <p className="text-light" style={{fontSize: '0.85rem', lineHeight: '1.4', margin: '0.5rem 0', flexGrow: 1, display: 'flex', alignItems: 'center'}}>Two-year program for board exams and NEET preparation simultaneously.</p>
+            <p className="text-light" style={{fontSize: '0.85rem', lineHeight: '1.4', margin: '0.5rem 0', flexGrow: 1, display: 'flex', alignItems: 'center'}}>A comprehensive two-year program covering board exams and NEET preparation simultaneously.</p>
             <a href="#contact" style={{display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#0080ff', fontWeight: 'bold', textDecoration: 'none', fontSize: '0.9rem'}}>Enquire Now <ArrowRight size={14} /></a>
           </div>
 
@@ -36,7 +36,7 @@ const Courses = () => {
               </div>
               <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', minHeight: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>NEET Repeaters Batch</h3>
             </div>
-            <p className="text-light" style={{fontSize: '0.85rem', lineHeight: '1.4', margin: '0.5rem 0', flexGrow: 1, display: 'flex', alignItems: 'center'}}>Intensive one-year program focusing on rigorous testing and mind dynamics.</p>
+            <p className="text-light" style={{fontSize: '0.85rem', lineHeight: '1.4', margin: '0.5rem 0', flexGrow: 1, display: 'flex', alignItems: 'center'}}>An intensive one-year program focusing on rigorous testing schedules and Mind Dynamics techniques.</p>
             <a href="#contact" style={{display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#0080ff', fontWeight: 'bold', textDecoration: 'none', fontSize: '0.9rem'}}>Enquire Now <ArrowRight size={14} /></a>
           </div>
 
@@ -48,7 +48,7 @@ const Courses = () => {
               </div>
               <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', minHeight: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>NEET Re-Repeaters Batch</h3>
             </div>
-            <p className="text-light" style={{fontSize: '0.85rem', lineHeight: '1.4', margin: '0.5rem 0', flexGrow: 1, display: 'flex', alignItems: 'center'}}>Personalized mentoring to identify and fix specific weak areas from attempts.</p>
+            <p className="text-light" style={{fontSize: '0.85rem', lineHeight: '1.4', margin: '0.5rem 0', flexGrow: 1, display: 'flex', alignItems: 'center'}}>Personalized mentoring to identify and strengthen specific weak areas from previous attempts.</p>
             <a href="#contact" style={{display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#0080ff', fontWeight: 'bold', textDecoration: 'none', fontSize: '0.9rem'}}>Enquire Now <ArrowRight size={14} /></a>
           </div>
 
@@ -60,7 +60,7 @@ const Courses = () => {
               </div>
               <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', minHeight: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>JEE Main & Advanced</h3>
             </div>
-            <p className="text-light" style={{fontSize: '0.85rem', lineHeight: '1.4', margin: '0.5rem 0', flexGrow: 1, display: 'flex', alignItems: 'center'}}>Specialized coaching for engineering aspirants with problem-solving sessions.</p>
+            <p className="text-light" style={{fontSize: '0.85rem', lineHeight: '1.4', margin: '0.5rem 0', flexGrow: 1, display: 'flex', alignItems: 'center'}}>Specialized coaching for engineering aspirants, featuring intensive conceptual problem-solving sessions.</p>
             <a href="#contact" style={{display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#0080ff', fontWeight: 'bold', textDecoration: 'none', fontSize: '0.9rem'}}>Enquire Now <ArrowRight size={14} /></a>
           </div>
         </div>

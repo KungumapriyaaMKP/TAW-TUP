@@ -120,10 +120,10 @@ const MindDynamics = () => {
                 <h2 style={{margin: 0, color: 'white', fontSize: '2rem'}}>What is Mind Dynamics?</h2>
               </div>
               <p style={{fontSize: '1.2rem', lineHeight: '1.8', marginBottom: '1.5rem', color: '#cbd5e1', fontWeight: '300'}}>
-                Mind Dynamics is nothing but specialized techniques that teach you how to remember complex things in a very easy and quick manner. 
+                Mind Dynamics refers to specialized, scientifically proven techniques that teach you how to remember complex concepts quickly and easily. 
               </p>
               <p style={{fontSize: '1.2rem', lineHeight: '1.8', color: '#cbd5e1', fontWeight: '300'}}>
-                Using these methods, students can literally read and retain a whole book in a fraction of the usual time. It bridges the gap between hard work and smart work, ensuring long-term retention.
+                Using these methods, students can literally read and retain an entire textbook in a fraction of the usual time. It bridges the gap between hard work and smart work, ensuring lifelong memory retention.
               </p>
             </div>
           </div>
