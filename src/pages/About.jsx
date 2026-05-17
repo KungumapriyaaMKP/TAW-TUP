@@ -75,6 +75,7 @@ const About = () => {
                 src={galleryImg1} 
                 alt="Smart Classes at Toppers Academy" 
                 className="about-showcase-img"
+                loading="lazy"
               />
               <div className="about-image-accent-glow"></div>
             </div>
@@ -84,6 +85,7 @@ const About = () => {
                 src={galleryImg2} 
                 alt="Students studying at Toppers Academy" 
                 className="about-showcase-img"
+                loading="lazy"
               />
             </div>
           </div>
@@ -198,7 +200,7 @@ const About = () => {
               <div className="about-pillar-card" key={i} style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                 {f.image ? (
                   <div className="pillar-card-image-box">
-                    <img src={f.image} alt={f.title} className="pillar-card-image" />
+                    <img src={f.image} alt={f.title} className="pillar-card-image" loading="lazy" />
                   </div>
                 ) : (
                   <div className="pillar-icon-box">

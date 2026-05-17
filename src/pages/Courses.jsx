@@ -20,7 +20,7 @@ const Courses = () => {
           <div className="feature-card" style={{aspectRatio: '1/1', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '1.5rem', justifyContent: 'space-between'}}>
             <div>
               <div style={{marginBottom: '1rem', width: '60px', height: '60px', margin: '0 auto 1rem auto'}}>
-                <img src={integratedImg} alt="NEET Integrated" style={{width: '100%', height: '100%', objectFit: 'contain'}} />
+                <img src={integratedImg} alt="NEET Integrated" style={{width: '100%', height: '100%', objectFit: 'contain'}} loading="lazy" />
               </div>
               <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', minHeight: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>NEET 11th & 12th Integrated</h3>
             </div>
@@ -32,7 +32,7 @@ const Courses = () => {
           <div className="feature-card" style={{aspectRatio: '1/1', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '1.5rem', justifyContent: 'space-between'}}>
             <div>
               <div style={{marginBottom: '1rem', width: '60px', height: '60px', margin: '0 auto 1rem auto'}}>
-                <img src={repeatersImg} alt="NEET Repeaters" style={{width: '100%', height: '100%', objectFit: 'contain'}} />
+                <img src={repeatersImg} alt="NEET Repeaters" style={{width: '100%', height: '100%', objectFit: 'contain'}} loading="lazy" />
               </div>
               <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', minHeight: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>NEET Repeaters Batch</h3>
             </div>
@@ -44,7 +44,7 @@ const Courses = () => {
           <div className="feature-card" style={{aspectRatio: '1/1', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '1.5rem', justifyContent: 'space-between'}}>
             <div>
               <div style={{marginBottom: '1rem', width: '60px', height: '60px', margin: '0 auto 1rem auto'}}>
-                <img src={mentoringImg} alt="NEET Re-Repeaters" style={{width: '100%', height: '100%', objectFit: 'contain'}} />
+                <img src={mentoringImg} alt="NEET Re-Repeaters" style={{width: '100%', height: '100%', objectFit: 'contain'}} loading="lazy" />
               </div>
               <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', minHeight: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>NEET Re-Repeaters Batch</h3>
             </div>
@@ -56,7 +56,7 @@ const Courses = () => {
           <div className="feature-card" style={{aspectRatio: '1/1', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '1.5rem', justifyContent: 'space-between', border: '1px solid #0080ff'}}>
             <div>
               <div style={{marginBottom: '1rem', width: '60px', height: '60px', margin: '0 auto 1rem auto'}}>
-                <img src={jeeImg} alt="JEE Main & Advanced" style={{width: '100%', height: '100%', objectFit: 'contain'}} />
+                <img src={jeeImg} alt="JEE Main & Advanced" style={{width: '100%', height: '100%', objectFit: 'contain'}} loading="lazy" />
               </div>
               <h3 style={{fontSize: '1.1rem', marginBottom: '0.5rem', minHeight: '2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>JEE Main & Advanced</h3>
             </div>

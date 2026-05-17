@@ -466,6 +466,7 @@ const Results = () => {
                   src={currentData.topper.image} 
                   alt={currentData.topper.name}
                   className="results-topper-img"
+                  loading="lazy"
                 />
                 <div className="results-topper-badge">{currentData.badge}</div>
               </div>
