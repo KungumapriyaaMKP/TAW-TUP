@@ -132,7 +132,37 @@
 
 @media (max-width: 992px) {
   .navbar-container {
-    padding: 0 1.25rem;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 1rem !important;
+  }
+
+  .nav-btn-container {
+    order: 1 !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    flex: 1 !important;
+  }
+
+  .navbar-logo {
+    order: 2 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 2 !important;
+    margin: 0 auto !important;
+  }
+
+  .menu-icon {
+    order: 3 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    flex: 1 !important;
+    background: transparent;
+    border: none;
+    cursor: pointer;
   }
 
   .nav-links-container {
@@ -153,25 +183,31 @@
   .nav-links-container.active {
     left: 0;
   }
-  
-  .menu-icon {
-    display: flex;
-  }
 }
 
-/* Hide brand name text on narrow screens so they never squish together */
+/* Perfect mobile centering and sizing on narrow viewports */
 @media (max-width: 576px) {
   .logo-text {
-    display: none !important;
+    display: flex !important;
+    font-size: 0.72rem !important;
+    gap: 0.25rem !important;
+    letter-spacing: 0.2px !important;
+  }
+  .logo-text span {
+    font-size: 0.75rem !important;
+  }
+  .logo-img {
+    height: 32px !important;
+    width: 32px !important;
   }
   .navbar-container {
-    padding: 0 0.75rem;
+    padding: 0 0.5rem !important;
   }
   .nav-cta {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.7rem;
+    padding: 0.35rem 0.65rem !important;
+    font-size: 0.65rem !important;
   }
   .menu-icon {
-    padding: 0.25rem;
+    padding: 0.2rem !important;
   }
 }
