@@ -33,8 +33,8 @@ const About = () => {
       image: omrImg
     },
     {
-      title: "Personalized Student Mentorship",
-      desc: "Every student receives individual attention, motivation, academic monitoring, and strategic guidance to maximize performance and unlock their true scoring potential.",
+      title: "Mind Dynamics",
+      desc: "Utilizing exclusive memory methods, scientific mnemonics, and mental focus techniques. We teach students how to learn massive biological definitions and complex equations quickly and retain them forever.",
       icon: <Brain size={28} />
     },
     {
@@ -205,7 +205,7 @@ const About = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
                   <h3>{f.title}</h3>
                   <p style={{ flex: 1 }}>{f.desc}</p>
-                  {f.title.includes("Mentorship") && (
+                  {f.title.includes("Mind Dynamics") && (
                     <a href="#mind-dynamics" className="pillar-link">
                       Click Here <ArrowRight size={16} />
                     </a>
