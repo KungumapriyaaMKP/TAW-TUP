@@ -139,27 +139,27 @@
     padding: 0 1rem !important;
   }
 
-  .nav-btn-container {
+  .navbar-logo {
     order: 1 !important;
     display: flex !important;
     justify-content: flex-start !important;
-    flex: 1 !important;
+    align-items: center !important;
+    flex: 1.5 !important;
+    margin: 0 !important;
   }
 
-  .navbar-logo {
+  .nav-btn-container {
     order: 2 !important;
     display: flex !important;
     justify-content: center !important;
-    align-items: center !important;
-    flex: 2 !important;
-    margin: 0 auto !important;
+    flex: 1.2 !important;
   }
 
   .menu-icon {
     order: 3 !important;
     display: flex !important;
     justify-content: flex-end !important;
-    flex: 1 !important;
+    flex: 0.8 !important;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -189,23 +189,23 @@
 @media (max-width: 576px) {
   .logo-text {
     display: flex !important;
-    font-size: 0.72rem !important;
-    gap: 0.25rem !important;
-    letter-spacing: 0.2px !important;
+    font-size: 0.65rem !important;
+    gap: 0.2rem !important;
+    letter-spacing: 0px !important;
   }
   .logo-text span {
-    font-size: 0.75rem !important;
+    font-size: 0.68rem !important;
   }
   .logo-img {
-    height: 32px !important;
-    width: 32px !important;
+    height: 28px !important;
+    width: 28px !important;
   }
   .navbar-container {
-    padding: 0 0.5rem !important;
+    padding: 0 0.4rem !important;
   }
   .nav-cta {
-    padding: 0.35rem 0.65rem !important;
-    font-size: 0.65rem !important;
+    padding: 0.35rem 0.55rem !important;
+    font-size: 0.62rem !important;
   }
   .menu-icon {
     padding: 0.2rem !important;
