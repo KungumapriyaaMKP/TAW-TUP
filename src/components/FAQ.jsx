@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Plus, Minus, MessageCircle } from 'lucide-react';
 import './FAQ.css';
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(0); // First item open by default
+  const [openIndex, setOpenIndex] = useState(0);
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? -1 : index);
@@ -39,41 +39,51 @@ const FAQ = () => {
   return (
     <section className="faq-section" id="faq">
       <div className="container">
-        <div className="faq-header text-center mb-5">
-          <h2 className="section-title">Frequently Asked <span className="text-accent">Questions</span></h2>
-          <p className="section-subtitle">Everything you need to know about joining Toppers Academy.</p>
-        </div>
+        <div className="faq-layout">
+          
+          {/* Left Column - Sticky Header */}
+          <div className="faq-left">
+            <h2 className="faq-title-main">Got Questions? <br/><span className="text-accent">We've Got Answers.</span></h2>
+            <p className="faq-subtitle-main">Everything you need to know about joining Toppers Academy, our courses, and our premium facilities.</p>
+            <a href="#contact" className="faq-contact-btn">
+              <MessageCircle size={18} />
+              Still have questions? Contact Us
+            </a>
+          </div>
 
-        <div className="faq-container">
-          {faqs.map((faq, index) => (
-            <div 
-              key={index} 
-              className={`faq-item ${openIndex === index ? 'active' : ''}`}
-            >
-              <button 
-                className="faq-question" 
-                onClick={() => toggleAccordion(index)}
-              >
-                <span>{faq.question}</span>
-                {openIndex === index ? (
-                  <ChevronUp className="faq-icon" size={20} />
-                ) : (
-                  <ChevronDown className="faq-icon" size={20} />
-                )}
-              </button>
-              <div 
-                className="faq-answer-wrapper"
-                style={{ 
-                  maxHeight: openIndex === index ? '500px' : '0',
-                  opacity: openIndex === index ? 1 : 0
-                }}
-              >
-                <div className="faq-answer">
-                  <p>{faq.answer}</p>
+          {/* Right Column - Premium Accordion */}
+          <div className="faq-right">
+            <div className="faq-container">
+              {faqs.map((faq, index) => (
+                <div 
+                  key={index} 
+                  className={`faq-item-premium ${openIndex === index ? 'active' : ''}`}
+                >
+                  <button 
+                    className="faq-question-premium" 
+                    onClick={() => toggleAccordion(index)}
+                  >
+                    <span>{faq.question}</span>
+                    <span className="faq-icon-premium">
+                      {openIndex === index ? <Minus size={18} /> : <Plus size={18} />}
+                    </span>
+                  </button>
+                  <div 
+                    className="faq-answer-wrapper"
+                    style={{ 
+                      maxHeight: openIndex === index ? '500px' : '0',
+                      opacity: openIndex === index ? 1 : 0
+                    }}
+                  >
+                    <div className="faq-answer-premium">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
         </div>
       </div>
     </section>
