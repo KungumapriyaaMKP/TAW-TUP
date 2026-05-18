@@ -64,6 +64,12 @@ const Courses = () => {
             <a href="#contact" style={{display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#0080ff', fontWeight: 'bold', textDecoration: 'none', fontSize: '0.9rem'}}>Enquire Now <ArrowRight size={14} /></a>
           </div>
         </div>
+        
+        <div style={{textAlign: 'center', marginTop: '2rem'}}>
+          <a href="#contact" className="btn" style={{backgroundColor: 'var(--primary-blue)', color: 'white', padding: '1rem 2.5rem', fontSize: '1.1rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '0.5rem'}}>
+            Enquire About Courses <ArrowRight size={18} />
+          </a>
+        </div>
       </div>
     </div>
   );

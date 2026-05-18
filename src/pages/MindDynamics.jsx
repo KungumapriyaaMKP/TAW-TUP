@@ -1,5 +1,5 @@
 import EnquiryForm from '../components/EnquiryForm';
-import { Brain } from 'lucide-react';
+import { Brain, ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const MindDynamics = () => {
@@ -153,6 +153,13 @@ const MindDynamics = () => {
               ></iframe>
             </div>
           </div>
+          </div>
+        </div>
+        
+        <div style={{textAlign: 'center', marginTop: '4rem'}}>
+          <a href="#contact" className="btn" style={{backgroundColor: 'var(--accent-green)', color: 'white', padding: '1rem 2.5rem', fontSize: '1.1rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', borderRadius: '50px'}}>
+            Enquire About Mind Dynamics <ArrowRight size={18} />
+          </a>
         </div>
       </div>
     </div>
