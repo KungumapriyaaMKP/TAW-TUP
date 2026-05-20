@@ -1,4 +1,3 @@
-import EnquiryForm from '../components/EnquiryForm';
 import { Brain, ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -130,15 +129,15 @@ const MindDynamics = () => {
           
           <div 
             className={`md-roll-right ${isVisible ? 'animate' : ''}`}
-            style={{flex: '0 0 315px', transformStyle: 'preserve-3d'}}
+            style={{flex: '0 0 560px', transformStyle: 'preserve-3d'}}
           >
             <div className="video-container-3d" style={{
               borderRadius: '24px', 
               overflow: 'hidden', 
               boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
               border: '10px solid #1e293b',
-              width: '315px',
-              height: '560px',
+              width: '560px',
+              height: '315px',
               background: '#000'
             }}>
               <iframe 
@@ -154,7 +153,6 @@ const MindDynamics = () => {
             </div>
           </div>
           </div>
-        </div>
         
         <div style={{textAlign: 'center', marginTop: '4rem'}}>
           <a href="#contact" className="btn" style={{backgroundColor: 'var(--accent-green)', color: 'white', padding: '1rem 2.5rem', fontSize: '1.1rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', borderRadius: '50px'}}>

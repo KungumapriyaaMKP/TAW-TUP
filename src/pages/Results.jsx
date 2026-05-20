@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Award, ChevronLeft, ChevronRight, GraduationCap, Trophy } from 'lucide-react';
+import { Award, ChevronLeft, ChevronRight, Trophy } from 'lucide-react';
 
 const Results = () => {
   const [activeYearIndex, setActiveYearIndex] = useState(0);

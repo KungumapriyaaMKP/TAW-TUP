@@ -29,7 +29,7 @@ const Gallery = () => {
     },
     {
       src: "/gallery/smart classes.webp",
-      title: "Smart Classes",
+      title: "Smart Boards",
       category: "Infrastructure",
       position: "top"
     },

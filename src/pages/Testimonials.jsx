@@ -402,7 +402,7 @@ const Testimonials = () => {
             <iframe 
               width="100%" 
               height="100%" 
-              src="https://www.youtube.com/embed/yDVB-qWnScg?autoplay=1&mute=1&loop=1&playlist=yDVB-qWnScg&controls=0&modestbranding=1&rel=0&iv_load_policy=3" 
+              src="https://www.youtube.com/embed/yDVB-qWnScg?autoplay=0&mute=0&loop=1&playlist=yDVB-qWnScg&controls=1&modestbranding=1&rel=0&iv_load_policy=3" 
               title="Toppers Academy Student Success Video" 
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

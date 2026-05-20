@@ -1,4 +1,3 @@
-import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import logoImg from '../assets/IMG-20251226-WA0012.jpg';
@@ -6,8 +5,6 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (

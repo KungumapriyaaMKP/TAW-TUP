@@ -1,4 +1,4 @@
-import { Target, Lightbulb, Award, Users, GraduationCap, Brain, BookOpen, ClipboardCheck, ArrowRight, CheckCircle2, BookOpenCheck, Sparkles, ShieldCheck } from 'lucide-react';
+import { Target, Lightbulb, Award, Users, GraduationCap, Brain, ArrowRight, Sparkles } from 'lucide-react';
 import './About.css';
 import galleryImg1 from '../assets/our gallery/2026-02-18.webp';
 import galleryImg2 from '../assets/our gallery/unnamed (5).webp';
