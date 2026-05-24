@@ -8,7 +8,7 @@ import booksImg from '../assets/books image.png';
 import omrImg from '../assets/our gallery/omr.webp';
 import mindDynamicsImg from '../assets/our gallery/mind dynamics.webp';
 import foundationCoursesImg from '../assets/our gallery/foundation courses.webp';
-import studentCentricImg from '../assets/our gallery/student centric environment.png';
+import hostelImg from '../assets/hostel.png';
 
 const About = () => {
   const missionPoints = [
@@ -48,7 +48,7 @@ const About = () => {
     {
       title: "Hostel Facilities",
       desc: "We provide highly secure, comfortable, and disciplined hostel accommodations with separate facilities for girls and boys, featuring hygienic boarding and structured study hours.",
-      image: studentCentricImg
+      image: hostelImg
     }
   ];
 
