@@ -8,26 +8,6 @@ const Results = () => {
 
   const resultsData = [
     {
-      year: "2025",
-      badge: "🏆 HISTORIC MILESTONE",
-      themeColor: "#2d3494", // Royal Blue
-      accentColor: "rgba(45, 52, 148, 0.06)",
-      topper: {
-        name: "ANANDHI V",
-        score: "705 / 720",
-        rank: "AIR 45",
-        college: "Stanley Medical College, Chennai 🩺",
-        image: "/topper_2025.png",
-        quote: "Toppers Academy provided me with exact coaching. The dynamic memory techniques and conceptual classes made NEET extremely easy to clear!"
-      },
-      achievers: [
-        { name: "Dharshini K", score: "685/720", college: "Madras Medical College" },
-        { name: "Pranesh Kumar R", score: "672/720", college: "Coimbatore Medical College" },
-        { name: "Subasri S", score: "660/720", college: "GMC Kallakurichi" },
-        { name: "Hari Prasath M", score: "652/720", college: "Kilpauk Medical College" }
-      ]
-    },
-    {
       year: "2024",
       badge: "⭐ RECORD-BREAKING SEATS",
       themeColor: "#10b981", // Green
