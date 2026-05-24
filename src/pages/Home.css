@@ -274,21 +274,43 @@
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 0 0 0.5rem 0;
+  }
+
+  .hero-video-widget {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .hero-video-time {
+    font-size: 0.8rem;
+  }
+
   .admission-alert-banner {
     flex-direction: column;
     text-align: center;
-    padding: 1.5rem;
-    margin-bottom: 2.5rem;
-    width: calc(100% - 2rem);
+    padding: 0.9rem 1.2rem;
+    margin: 0.5rem auto 2rem auto;
+    width: calc(100% - 1.5rem);
+    gap: 0.8rem;
   }
   
   .banner-pulse-dot {
     display: none; /* Hide pulse dot to center text on mobile */
   }
   
+  .banner-message {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
   .banner-btn {
     width: 100%;
     text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 }
 .home-page > div[id] { scroll-margin-top: 130px; }
