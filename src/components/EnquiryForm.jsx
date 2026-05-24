@@ -27,7 +27,7 @@ const EnquiryForm = ({ compact = false }) => {
 *School Name:* ${formData.school}`;
 
     // Redirect to WhatsApp
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=919788812111&text=${message}`;
+    const whatsappUrl = `https://wa.me/919788812111?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 

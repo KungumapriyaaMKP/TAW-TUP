@@ -76,7 +76,7 @@ const FloatingActions = () => {
       <div className="float-btn-wrapper">
         <span className="float-tooltip">Chat on WhatsApp</span>
         <a 
-          href="https://api.whatsapp.com/send?phone=919788812111&text=Hello%20Toppers%20Academy,%20I%20would%20like%20to%20know%20more%20about%20your%20NEET%20coaching." 
+          href="https://wa.me/919788812111?text=Hello%20Toppers%20Academy,%20I%20would%20like%20to%20know%20more%20about%20your%20NEET%20coaching." 
           target="_blank" 
           rel="noopener noreferrer" 
           className="float-btn whatsapp-btn"
