@@ -507,11 +507,19 @@ const Results = () => {
             fontWeight: '700',
             color: '#64748b'
           }}>
-            Year {resultsData[(activeYearIndex - 1 + resultsData.length) % resultsData.length].year}
-            <span style={{margin: '0 0.8rem', color: '#cbd5e1'}}>|</span>
+            {resultsData.length > 2 && (
+              <>
+                Year {resultsData[(activeYearIndex - 1 + resultsData.length) % resultsData.length].year}
+                <span style={{margin: '0 0.8rem', color: '#cbd5e1'}}>|</span>
+              </>
+            )}
             <strong style={{color: 'var(--primary-blue)', fontSize: '1.1rem'}}>{currentData.year} results</strong>
-            <span style={{margin: '0 0.8rem', color: '#cbd5e1'}}>|</span>
-            Year {resultsData[(activeYearIndex + 1) % resultsData.length].year}
+            {resultsData.length > 2 && (
+              <>
+                <span style={{margin: '0 0.8rem', color: '#cbd5e1'}}>|</span>
+                Year {resultsData[(activeYearIndex + 1) % resultsData.length].year}
+              </>
+            )}
           </span>
 
           <button 

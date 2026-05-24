@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Volume2, VolumeX } from 'lucide-react';
 import About from './About';
 import Courses from './Courses';
 import MindDynamics from './MindDynamics';
@@ -13,6 +14,7 @@ const Home = () => {
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
   const [showSoundBtn, setShowSoundBtn] = useState(true);
+  const [currentTime, setCurrentTime] = useState(0);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -21,6 +23,11 @@ const Home = () => {
     // Ensure it autoplays muted
     video.muted = true;
     video.play().catch(() => {});
+
+    const handleTimeUpdate = () => {
+      setCurrentTime(video.currentTime);
+    };
+    video.addEventListener('timeupdate', handleTimeUpdate);
 
     // Scroll: mute when scrolled away, unmute when back at top
     const handleScroll = () => {
@@ -38,8 +45,17 @@ const Home = () => {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      video.removeEventListener('timeupdate', handleTimeUpdate);
+    };
   }, [showSoundBtn]);
+
+  const formatTime = (time) => {
+    const min = Math.floor(time / 60);
+    const sec = Math.floor(time % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+  };
 
   const handleSoundToggle = () => {
     const video = videoRef.current;
@@ -57,35 +73,25 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section" style={{ position: 'relative' }}>
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="hero-video"
-        >
-          <source src="/VID-20260220-WA0027 (1).mp4" type="video/mp4" />
-        </video>
+        <div style={{ position: 'relative', width: '100%', maxWidth: '1200px', margin: '0 auto' }}>
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="hero-video"
+            style={{ width: '100%', display: 'block' }}
+          >
+            <source src="/VID-20260220-WA0027 (1).mp4" type="video/mp4" />
+          </video>
 
-        {/* Sound Toggle Button */}
-        <button
-          onClick={handleSoundToggle}
-          className="hero-sound-btn"
-          title={isMuted ? 'Click to turn on sound' : 'Click to mute'}
-        >
-          {isMuted ? (
-            <>
-              <span className="sound-icon">🔇</span>
-              <span className="sound-label">Tap for Sound</span>
-            </>
-          ) : (
-            <>
-              <span className="sound-icon">🔊</span>
-              <span className="sound-label">Sound On</span>
-            </>
-          )}
-        </button>
+          {/* Top Video Overlay Widget */}
+          <div className="hero-video-widget" onClick={handleSoundToggle} title={isMuted ? 'Click to turn on sound' : 'Click to mute'}>
+            <span className="hero-video-time">{formatTime(currentTime)}</span>
+            {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+          </div>
+        </div>
       </section>
 
       {/* Catchy Urgency Admission Banner */}

@@ -122,7 +122,7 @@ const Contact = () => {
                 </div>
                 <div className="contact-details-exact">
                   <h4>Email Us</h4>
-                  <p>info@toppersacademy.in</p>
+                  <p>toppersacademytup@gmail.com</p>
                 </div>
               </div>
 

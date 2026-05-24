@@ -12,16 +12,19 @@
   align-items: flex-start;
 }
 
+.faq-left {
+  position: sticky;
+  top: 150px;
+}
+
 @media (max-width: 992px) {
   .faq-layout {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-}
-
-.faq-left {
-  position: sticky;
-  top: 150px;
+  .faq-left {
+    position: static !important;
+  }
 }
 
 .faq-title-main {

@@ -66,7 +66,7 @@ const Footer = () => {
             </li>
             <li className="flex gap-1 items-center" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
               <Mail size={20} style={{ color: '#f59e0b', flexShrink: 0 }} />
-              <span>info@toppersacademy.in</span>
+              <span>toppersacademytup@gmail.com</span>
             </li>
           </ul>
         </div>
@@ -77,7 +77,7 @@ const Footer = () => {
           <span style={{ fontSize: '0.85rem', opacity: '0.8', display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
             Developed by <a href="https://www.linkedin.com/in/kungumapriyaa-m/" target="_blank" rel="noopener noreferrer" style={{ color: '#f59e0b', fontWeight: 'bold', textDecoration: 'underline' }}>Kungumapriyaa M</a>
             <span>•</span>
-            <a href="mailto:kungumapriyaamkp5@gmail.com" style={{ color: '#f59e0b', textDecoration: 'none', fontWeight: '500' }}>kungumapriyaamkp5@gmail.com</a>
+            <a href="mailto:toppersacademytup@gmail.com" style={{ color: '#f59e0b', textDecoration: 'none', fontWeight: '500' }}>toppersacademytup@gmail.com</a>
           </span>
         </p>
       </div>

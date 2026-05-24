@@ -38,7 +38,7 @@ const FloatingActions = () => {
       } else if (lowerInput.includes('jee') || lowerInput.includes('engineering') || lowerInput.includes('iit')) {
         botResponse = "Yes, we provide specialized JEE Main & Advanced classes for engineering aspirants. Our sessions focus heavily on conceptual problem-solving, high-level physics/maths derivations, and rigorous practice schedules.";
       } else if (lowerInput.includes('contact') || lowerInput.includes('phone') || lowerInput.includes('number') || lowerInput.includes('call') || lowerInput.includes('whatsapp')) {
-        botResponse = "You can connect with us directly by calling +91 97888 12111 or emailing us at info@toppersacademy.in. You can also click the green WhatsApp float button on the bottom left to chat instantly!";
+        botResponse = "You can connect with us directly by calling +91 97888 12111 or emailing us at toppersacademytup@gmail.com. You can also click the green WhatsApp float button on the bottom left to chat instantly!";
       } else if (lowerInput.includes('time') || lowerInput.includes('hour') || lowerInput.includes('when') || lowerInput.includes('open')) {
         botResponse = "Toppers Academy is open Monday to Saturday from 8:30 AM to 8:30 PM, and on Sundays from 10:00 AM to 4:00 PM.";
       } else if (lowerInput.includes('thank') || lowerInput.includes('thanks') || lowerInput.includes('great') || lowerInput.includes('good') || lowerInput.includes('nice')) {
