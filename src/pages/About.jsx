@@ -4,7 +4,7 @@ import galleryImg1 from '../assets/our gallery/2026-02-18.webp';
 import galleryImg2 from '../assets/our gallery/unnamed (5).webp';
 
 import facultyImg from '../assets/our gallery/WhatsApp Image 2021-10-23 at 10.58.11 AM.webp';
-import booksImg from '../assets/our gallery/coaching_books_materials.png';
+import booksImg from '../assets/books image.png';
 import omrImg from '../assets/our gallery/omr.webp';
 import mindDynamicsImg from '../assets/our gallery/mind dynamics.webp';
 import foundationCoursesImg from '../assets/our gallery/foundation courses.webp';
