@@ -61,7 +61,7 @@ const About = () => {
           <div className="about-header-badge">ESTABLISHED 2016</div>
           <h1>Toppers Academy - <span className="text-accent">NEET Coaching centre</span> in Tiruppur</h1>
           <p className="about-main-subtitle text-light">
-            Toppers Academy - NEET Coaching centre in Tiruppur – Trusted Since 2016
+            Toppers Academy - Best NEET Coaching Centre in Tiruppur – Trusted Since 2016
           </p>
         </div>
 
