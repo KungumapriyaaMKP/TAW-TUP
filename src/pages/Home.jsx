@@ -94,6 +94,11 @@ const Home = () => {
         </div>
       </section>
 
+
+
+      {/* SPA Sections */}
+      <div id="courses"><Courses /></div>
+      
       {/* Catchy Urgency Admission Banner */}
       <div className="admission-alert-banner">
         <div className="banner-pulse-dot"></div>
@@ -103,8 +108,6 @@ const Home = () => {
         <a href="#contact" className="banner-btn">ENQUIRE NOW</a>
       </div>
 
-      {/* SPA Sections */}
-      <div id="courses"><Courses /></div>
       <div id="mind-dynamics"><MindDynamics /></div>
       <div id="results"><Results /></div>
       <div id="testimonials"><Testimonials /></div>
