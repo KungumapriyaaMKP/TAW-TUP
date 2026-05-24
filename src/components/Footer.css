@@ -86,7 +86,8 @@
   color: #f59e0b;
   font-weight: 800;
   font-size: 1.1rem;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   display: inline-block;
   transition: transform 0.3s ease, color 0.3s ease;
 }
