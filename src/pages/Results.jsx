@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Award, ChevronLeft, ChevronRight, Trophy } from 'lucide-react';
+import results2024 from '../assets/results/2024.jpg';
+import results2023 from '../assets/results/2023.jpeg';
 
 const Results = () => {
   const [activeYearIndex, setActiveYearIndex] = useState(0);
@@ -35,7 +37,7 @@ const Results = () => {
         score: "695 / 720",
         rank: "AIR 112",
         college: "Dhanalakshmi Srinivasan Medical College 🩺",
-        image: "/topper_2024.png",
+        image: results2024,
         quote: "Getting a government medical seat was my ultimate goal. The supportive mentors, 1:1 doubts solving, and systematic OMR tests helped me succeed!"
       },
       achievers: [
@@ -48,22 +50,17 @@ const Results = () => {
     {
       year: "2023",
       badge: "🎓 EXCEPTIONAL ACHIEVEMENTS",
-      themeColor: "#9333ea", // Purple
+      themeColor: "#9333ea",
       accentColor: "rgba(147, 51, 234, 0.06)",
       topper: {
-        name: "Avantika G",
-        score: "690 / 720",
-        rank: "AIR 164",
-        college: "Nandha Medical College 🩺",
-        image: "/topper_2025.png",
-        quote: "The rigorous coaching framework and intensive performance mappings pushed my limits. I am extremely proud to be an alumnus of Toppers!"
+        name: "",
+        score: "",
+        rank: "",
+        college: "",
+        image: results2023,
+        quote: ""
       },
-      achievers: [
-        { name: "Sanjay Prasath S", score: "662/720", college: "Stanley Medical College" },
-        { name: "Nisha Fathima A", score: "650/720", college: "GMC Salem" },
-        { name: "Abinaya R", score: "642/720", college: "Coimbatore Medical College" },
-        { name: "Manoj Kumar S", score: "638/720", college: "GMC Trichy" }
-      ]
+      achievers: []
     }
   ];
 
@@ -437,88 +434,76 @@ const Results = () => {
         </div>
 
         {/* Dynamic Slide Container */}
-        <div 
-          key={activeYearIndex} 
-          className="results-slide-container"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '55% 45%',
-            gap: '3.5rem',
-            alignItems: 'start'
-          }}
-        >
-          {/* Left Side: Topper Profile Showcase */}
-          <div>
-            <h3 className="results-grid-title">
-              🔬 The Year's Supreme Topper
-            </h3>
-            
-            <div 
-              className="results-topper-card"
+        {(() => {
+          const imageOnlyYears = new Set(['2023', '2024']);
+          const isImageOnlyYear = imageOnlyYears.has(currentData.year);
+          return (
+            <div
+              key={activeYearIndex}
+              className="results-slide-container"
               style={{
-                '--theme-color': currentData.themeColor,
-                '--accent-color': currentData.accentColor
+                display: 'grid',
+                gridTemplateColumns: isImageOnlyYear ? '1fr' : '55% 45%',
+                gap: isImageOnlyYear ? '1rem' : '3.5rem',
+                alignItems: 'start'
               }}
             >
-              {/* Photo Frame */}
-              <div className="results-topper-img-wrapper">
-                <img 
-                  src={currentData.topper.image} 
-                  alt={currentData.topper.name}
-                  className="results-topper-img"
-                  loading="lazy"
-                />
-                <div className="results-topper-badge">{currentData.badge}</div>
-              </div>
-
-              {/* Topper Details */}
-              <div className="results-topper-content">
-                <h4 className="results-topper-name">{currentData.topper.name}</h4>
-                
-                <div className="results-topper-score-row">
-                  <div className="results-score-pill">Score: {currentData.topper.score}</div>
-                  <div className="results-rank-pill">
-                    <Award size={16} /> {currentData.topper.rank}
+              {isImageOnlyYear ? (
+                <div style={{display: 'flex', justifyContent: 'center'}}>
+                  <div style={{maxWidth: 560, width: '100%'}}>
+                    <img
+                      src={currentData.topper.image}
+                      alt={currentData.topper.name || 'Results 2023'}
+                      loading="lazy"
+                      style={{width: '100%', height: 'auto', display: 'block'}}
+                    />
                   </div>
                 </div>
+              ) : (
+                <>
+                  {/* Left Side: Topper Profile Showcase */}
+                  <div>
+                    <h3 className="results-grid-title">🔬 The Year's Supreme Topper</h3>
+                    <div
+                      className="results-topper-card"
+                      style={{ '--theme-color': currentData.themeColor, '--accent-color': currentData.accentColor }}
+                    >
+                      <div className="results-topper-img-wrapper">
+                        <img src={currentData.topper.image} alt={currentData.topper.name} className="results-topper-img" loading="lazy" />
+                        <div className="results-topper-badge">{currentData.badge}</div>
+                      </div>
+                      <div className="results-topper-content">
+                        <h4 className="results-topper-name">{currentData.topper.name}</h4>
+                        <div className="results-topper-score-row">
+                          <div className="results-score-pill">Score: {currentData.topper.score}</div>
+                          <div className="results-rank-pill"><Award size={16} /> {currentData.topper.rank}</div>
+                        </div>
+                        <div className="results-topper-college">🎓 {currentData.topper.college}</div>
+                        <p className="results-topper-quote">"{currentData.topper.quote}"</p>
+                      </div>
+                    </div>
+                  </div>
 
-                <div className="results-topper-college">
-                  🎓 {currentData.topper.college}
-                </div>
-
-                <p className="results-topper-quote">
-                  "{currentData.topper.quote}"
-                </p>
-              </div>
-
+                  {/* Right Side: Other High Achievers Grid */}
+                  <div>
+                    <h3 className="results-grid-title" style={{ '--theme-color': currentData.themeColor }}>🎉 Outstanding Placements</h3>
+                    <div className="results-other-achievers" style={{ '--theme-color': currentData.themeColor }}>
+                      {currentData.achievers.map((achiever, i) => (
+                        <div key={i} className="results-achiever-row">
+                          <div className="results-achiever-name-col">
+                            <h4>{achiever.name}</h4>
+                            <p>🎓 {achiever.college}</p>
+                          </div>
+                          <div className="results-achiever-score">{achiever.score}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
-          </div>
-
-          {/* Right Side: Other High Achievers Grid */}
-          <div>
-            <h3 className="results-grid-title" style={{'--theme-color': currentData.themeColor}}>
-              🎉 Outstanding Placements
-            </h3>
-            
-            <div 
-              className="results-other-achievers"
-              style={{'--theme-color': currentData.themeColor}}
-            >
-              {currentData.achievers.map((achiever, i) => (
-                <div key={i} className="results-achiever-row">
-                  <div className="results-achiever-name-col">
-                    <h4>{achiever.name}</h4>
-                    <p>🎓 {achiever.college}</p>
-                  </div>
-                  <div className="results-achiever-score">
-                    {achiever.score}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
+          );
+        })()}
 
         {/* Bottom Slide Navigation Buttons */}
         <div style={{

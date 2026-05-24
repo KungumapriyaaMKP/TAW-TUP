@@ -13,11 +13,11 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="hero-video"
           controls
         >
@@ -29,7 +29,7 @@ const Home = () => {
       <div className="admission-alert-banner">
         <div className="banner-pulse-dot"></div>
         <div className="banner-message">
-          <strong>📢 URGENT ADMISSION NOTICE:</strong> Yearly intake is strictly limited to <strong>100 seats only</strong> to maintain our high-focus premium coaching standards. Batch 2026 seats are filling fast!
+          <strong>📢 URGENT ADMISSION NOTICE:</strong> Yearly intake is strictly limited to <strong>100 seats only</strong> to maintain our high-focus premium coaching standards. Batch 2027 seats are filling fast!
         </div>
         <a href="#contact" className="banner-btn">ENQUIRE NOW</a>
       </div>
@@ -37,7 +37,7 @@ const Home = () => {
       {/* SPA Sections */}
       <div id="courses"><Courses /></div>
       <div id="mind-dynamics"><MindDynamics /></div>
-      
+
       <div id="results"><Results /></div>
       <div id="testimonials"><Testimonials /></div>
       <div id="about"><About /></div>

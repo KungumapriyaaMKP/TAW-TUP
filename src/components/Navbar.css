@@ -53,8 +53,8 @@
 }
 
 .logo-img {
-  height: 45px;
-  width: 45px;
+  height: 56px;
+  width: 56px;
   border-radius: 6px;
   object-fit: contain;
 }
@@ -63,6 +63,12 @@
   display: flex;
   gap: 0.35rem;
   letter-spacing: 1px;
+}
+
+.logo-text span {
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 1;
 }
 
 .nav-links-container {

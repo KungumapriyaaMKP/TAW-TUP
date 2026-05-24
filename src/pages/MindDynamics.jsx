@@ -129,15 +129,15 @@ const MindDynamics = () => {
           
           <div 
             className={`md-roll-right ${isVisible ? 'animate' : ''}`}
-            style={{flex: '0 0 560px', transformStyle: 'preserve-3d'}}
+            style={{flex: '0 0 340px', transformStyle: 'preserve-3d'}}
           >
             <div className="video-container-3d" style={{
-              borderRadius: '24px', 
+              borderRadius: '28px', 
               overflow: 'hidden', 
               boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
-              border: '10px solid #1e293b',
-              width: '560px',
-              height: '315px',
+              border: '12px solid #1e293b',
+              width: '320px',
+              height: '570px',
               background: '#000'
             }}>
               <iframe 

@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Star } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Star, Volume2, VolumeX } from 'lucide-react';
+import testimonialBinu from '../assets/testimonial_binu.mp4';
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -7,6 +8,18 @@ const Testimonials = () => {
     isMobile: false,
     isTablet: false
   });
+
+  const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    const onVolumeChange = () => setIsMuted(!!v.muted);
+    v.addEventListener('volumechange', onVolumeChange);
+    setIsMuted(!!v.muted);
+    return () => v.removeEventListener('volumechange', onVolumeChange);
+  }, []);
 
   const testimonials = [
     {
@@ -398,24 +411,56 @@ const Testimonials = () => {
             {/* Screen shine reflection */}
             <div className="mobile-screen-shine"></div>
 
-            {/* YouTube Shorts IFrame */}
-            <iframe 
-              width="100%" 
-              height="100%" 
-              src="https://www.youtube.com/embed/yDVB-qWnScg?autoplay=0&mute=0&loop=1&playlist=yDVB-qWnScg&controls=1&modestbranding=1&rel=0&iv_load_policy=3" 
-              title="Toppers Academy Student Success Video" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
-              allowFullScreen
-              style={{
-                borderRadius: '27px',
-                border: 'none',
-                width: '100%',
-                height: '100%',
-                display: 'block'
-              }}
-            ></iframe>
+              {/* Local testimonial video with mute/unmute overlay */}
+              <div style={{position: 'relative', width: '100%', height: '100%'}}>
+                <video
+                  ref={videoRef}
+                  src={testimonialBinu}
+                  title="Toppers Academy Student Success Video"
+                  width="100%"
+                  height="100%"
+                  controls
+                  playsInline
+                  muted={isMuted}
+                  loop
+                  style={{
+                    borderRadius: '27px',
+                    border: 'none',
+                    width: '100%',
+                    height: '100%',
+                    display: 'block',
+                    objectFit: 'cover'
+                  }}
+                />
+                <button
+                  aria-label="Toggle mute"
+                  onClick={() => {
+                    const v = videoRef.current;
+                    if (!v) return;
+                    v.muted = !v.muted;
+                    try { if (!v.muted) v.play().catch(() => {}); } catch (e) {}
+                    setIsMuted(!!v.muted);
+                  }}
+                  style={{
+                    position: 'absolute',
+                    right: '12px',
+                    top: '12px',
+                    zIndex: 20,
+                    background: 'rgba(0,0,0,0.5)',
+                    border: 'none',
+                    color: 'white',
+                    width: '44px',
+                    height: '44px',
+                    borderRadius: '10px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer'
+                  }}
+                >
+                  {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+                </button>
+              </div>
           </div>
 
           {/* Right Column: 3D Stack Slider */}
