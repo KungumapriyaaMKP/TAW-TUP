@@ -81,7 +81,6 @@ const Footer = () => {
             <a href="mailto:kungumapriyaamkp5@gmail.com" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = '#f59e0b'} onMouseOut={(e) => e.target.style.color = '#cbd5e1'}>kungumapriyaamkp5@gmail.com</a>
             <div className="active-indicator" title="Currently Active">
               <span className="active-dot"></span>
-              <span className="active-text">Active</span>
             </div>
           </span>
         </p>

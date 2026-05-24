@@ -106,18 +106,14 @@
 .active-indicator {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  background-color: rgba(34, 197, 94, 0.1);
-  padding: 0.2rem 0.6rem;
-  border-radius: 9999px;
-  border: 1px solid rgba(34, 197, 94, 0.2);
-  margin-left: 0.5rem;
+  justify-content: center;
+  margin-left: 0.2rem;
   transition: all 0.3s ease;
+  padding: 0.2rem;
 }
 
 .active-indicator:hover {
-  background-color: rgba(34, 197, 94, 0.2);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.1);
 }
 
 .active-dot {
