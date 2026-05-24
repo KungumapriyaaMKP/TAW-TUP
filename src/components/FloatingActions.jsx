@@ -20,7 +20,7 @@ const FloatingActions = () => {
       if (lowerInput === 'hi' || lowerInput === 'hello' || lowerInput === 'hey' || lowerInput.startsWith('hi ') || lowerInput.startsWith('hello ')) {
         botResponse = "Hello! Welcome to Toppers Academy. I can help you with admissions, courses, repeater batches, Mind Dynamics memory techniques, physical location, hostel facilities, or fee structures. What would you like to know?";
       } else if (lowerInput.includes('fee') || lowerInput.includes('cost') || lowerInput.includes('price')) {
-        botResponse = "Our fee structures are highly competitive and customized based on the batch (Integrated, Repeaters, or Foundation). We also offer scholarships for high-performing students. Please call our admission desk at +91 97888 12111 for exact details!";
+        botResponse = "Our fee structures are customized based on the batch (Integrated, Repeaters, or Foundation). We also offer scholarships for high-performing students. Please call our admission desk at +91 97888 12111 for exact details!";
       } else if (lowerInput.includes('course') || lowerInput.includes('syllabus') || lowerInput.includes('subjects')) {
         botResponse = "We offer premium result-oriented batches: 1) NEET 11th & 12th Integrated, 2) NEET Repeaters Batch, 3) NEET Re-Repeaters Batch, and 4) JEE Main & Advanced prep. All courses feature expert faculty and standard NCERT study materials.";
       } else if (lowerInput.includes('repeat') || lowerInput.includes('dropper')) {
