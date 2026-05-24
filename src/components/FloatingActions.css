@@ -275,6 +275,7 @@
   color: white;
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -323,8 +324,12 @@
 
 @media (max-width: 480px) {
   .chat-window {
-    width: 290px;
-    right: -10px;
+    width: calc(100vw - 2.5rem);
+    max-width: 320px;
+    right: -1rem;
     height: 420px;
+  }
+  .chat-header span {
+    font-size: 0.9rem;
   }
 }
