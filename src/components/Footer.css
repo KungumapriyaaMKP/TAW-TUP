@@ -82,25 +82,32 @@
   font-size: 0.9rem;
 }
 
-.catchy-developer-text {
-  background: linear-gradient(90deg, #ff8a00, #e52e71, #9c27b0, #00d4ff, #ff8a00);
-  background-size: 400% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.developer-link {
+  color: #f59e0b;
   font-weight: 800;
+  font-size: 1.1rem;
   text-decoration: none;
-  animation: gradientAnimation 8s linear infinite;
   display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.catchy-developer-text:hover {
+.developer-link:hover {
   transform: scale(1.05);
-  transition: transform 0.3s ease;
+  color: #fbbf24;
 }
 
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 400% 50%; }
+.developer-email {
+  color: #f59e0b;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.developer-email:hover {
+  transform: scale(1.05);
+  color: #fbbf24;
 }
 
 .active-indicator {

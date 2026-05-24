@@ -74,11 +74,11 @@ const Footer = () => {
       <div className="footer-bottom">
         <p className="text-center" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center', justifyContent: 'center' }}>
           <span>&copy; {new Date().getFullYear()} Toppers Academy. All Rights Reserved.</span>
-          <span style={{ fontSize: '0.85rem', opacity: '0.9', display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
+          <span style={{ fontSize: '0.95rem', opacity: '0.95', display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
             <span style={{ color: '#cbd5e1' }}>Developed by</span>
-            <a href="https://www.linkedin.com/in/kungumapriyaa-m/" target="_blank" rel="noopener noreferrer" className="catchy-developer-text">Kungumapriyaa M</a>
-            <span style={{ color: '#64748b' }}>•</span>
-            <a href="mailto:kungumapriyaamkp5@gmail.com" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = '#f59e0b'} onMouseOut={(e) => e.target.style.color = '#cbd5e1'}>kungumapriyaamkp5@gmail.com</a>
+            <a href="https://www.linkedin.com/in/kungumapriyaa-m/" target="_blank" rel="noopener noreferrer" className="developer-link">Kungumapriyaa M</a>
+            <span style={{ color: '#64748b', fontSize: '1.2rem', fontWeight: 'bold' }}>•</span>
+            <a href="mailto:kungumapriyaamkp5@gmail.com" className="developer-email">kungumapriyaamkp5@gmail.com</a>
             <div className="active-indicator" title="Currently Active">
               <span className="active-dot"></span>
             </div>
