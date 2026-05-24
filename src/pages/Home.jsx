@@ -80,6 +80,7 @@ const Home = () => {
             loop
             muted
             playsInline
+            preload="auto"
             className="hero-video"
             style={{ width: '100%', display: 'block' }}
           >
