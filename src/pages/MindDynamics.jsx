@@ -143,11 +143,10 @@ const MindDynamics = () => {
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/THbPQAA3pFY?autoplay=1&mute=1&loop=1&playlist=THbPQAA3pFY" 
+                src="https://www.youtube.com/embed/THbPQAA3pFY?autoplay=1&mute=1&loop=1&playlist=THbPQAA3pFY&controls=0&rel=0&modestbranding=1&playsinline=1" 
                 title="Mind Dynamics Video" 
                 frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
             </div>

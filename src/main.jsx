@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
-// Initialize auto mute/unmute after initial render
+// Wait for React to fully mount all components before initialising video behaviour
 setTimeout(() => {
   try { initAutoMuteVideos(); } catch (e) { console.warn('Auto mute init failed', e); }
-}, 500);
+}, 1500);

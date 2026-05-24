@@ -292,3 +292,54 @@
   }
 }
 .home-page > div[id] { scroll-margin-top: 130px; }
+
+/* ── Hero Sound Toggle Button ────────────────────────── */
+.hero-sound-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 100px;
+  padding: 0.55rem 1.2rem 0.55rem 0.9rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: soundBtnPulse 2s ease-in-out infinite;
+}
+
+.hero-sound-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: scale(1.06);
+  animation: none;
+}
+
+.sound-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.sound-label {
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+@keyframes soundBtnPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+  }
+}

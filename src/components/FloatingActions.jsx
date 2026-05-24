@@ -12,19 +12,10 @@ const FloatingActions = () => {
 
   const toggleBot = () => setIsBotOpen(!isBotOpen);
 
-  const handleSendMessage = (e) => {
-    e.preventDefault();
-    if (!inputValue.trim()) return;
-
-    // Add user message
-    const newMessages = [...messages, { text: inputValue, sender: 'user' }];
-    setMessages(newMessages);
-    setInputValue('');
-
-    // Simulate bot response based on keywords
+  const processBotResponse = (text) => {
     setTimeout(() => {
       let botResponse = "Please contact our counseling team at +91 97888 12111 for direct admission assistance!";
-      const lowerInput = inputValue.toLowerCase().trim();
+      const lowerInput = text.toLowerCase().trim();
       
       if (lowerInput === 'hi' || lowerInput === 'hello' || lowerInput === 'hey' || lowerInput.startsWith('hi ') || lowerInput.startsWith('hello ')) {
         botResponse = "Hello! Welcome to Toppers Academy. I can help you with admissions, courses, repeater batches, Mind Dynamics memory techniques, physical location, hostel facilities, or fee structures. What would you like to know?";
@@ -55,7 +46,22 @@ const FloatingActions = () => {
       }
       
       setMessages(prev => [...prev, { text: botResponse, sender: 'bot' }]);
-    }, 1000);
+    }, 800);
+  };
+
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+    if (!inputValue.trim()) return;
+
+    const userText = inputValue;
+    setMessages(prev => [...prev, { text: userText, sender: 'user' }]);
+    setInputValue('');
+    processBotResponse(userText);
+  };
+
+  const handleQuickClick = (text) => {
+    setMessages(prev => [...prev, { text: text, sender: 'user' }]);
+    processBotResponse(text);
   };
 
   useEffect(() => {
@@ -105,6 +111,14 @@ const FloatingActions = () => {
             </div>
           ))}
           <div ref={chatEndRef} />
+        </div>
+
+        {/* Quick Reply Chips */}
+        <div className="quick-chips">
+          <button type="button" onClick={() => handleQuickClick("What are the fee structures?")}>💰 Fees Info</button>
+          <button type="button" onClick={() => handleQuickClick("What courses do you offer?")}>📚 Courses</button>
+          <button type="button" onClick={() => handleQuickClick("Where is Toppers Academy located?")}>📍 Location</button>
+          <button type="button" onClick={() => handleQuickClick("Tell me about Mind Dynamics")}>🧠 Mind Dynamics</button>
         </div>
 
         <form className="chat-footer" onSubmit={handleSendMessage}>

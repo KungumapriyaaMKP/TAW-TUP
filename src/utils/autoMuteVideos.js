@@ -1,109 +1,99 @@
-// Auto mute/unmute for HTML5 videos and YouTube iframes on visibility
-function loadYouTubeAPI() {
-  return new Promise((resolve) => {
-    if (window.YT && window.YT.Player) return resolve(window.YT);
-    const existing = document.querySelector('script[data-youtube-api]');
-    if (existing) {
-      existing.addEventListener('load', () => resolve(window.YT));
-      return;
-    }
-    const s = document.createElement('script');
-    s.src = 'https://www.youtube.com/iframe_api';
-    s.setAttribute('data-youtube-api', '1');
-    window.onYouTubeIframeAPIReady = () => resolve(window.YT);
-    document.head.appendChild(s);
-  });
+/**
+ * autoMuteVideos.js
+ * - All <video> elements autoplay muted on load (browser requirement)
+ * - On first user interaction (click / tap / key): unmute all visible videos
+ * - When a video scrolls out of view  → mute it
+ * - When a video scrolls back into view → unmute it (if user has interacted)
+ */
+
+let userHasInteracted = false;
+const trackedVideos = new Set();
+
+function isVideoVisible(video) {
+  const rect = video.getBoundingClientRect();
+  return (
+    rect.top < window.innerHeight * 0.85 &&
+    rect.bottom > window.innerHeight * 0.15
+  );
 }
 
-function ensureYouTubeIframe(iframe) {
-  try {
-    const src = iframe.getAttribute('src') || '';
-    if (!src.includes('youtube.com/embed')) return false;
-    let newSrc = src;
-    if (!/[?&]enablejsapi=1/.test(newSrc)) {
-      newSrc += (newSrc.includes('?') ? '&' : '?') + 'enablejsapi=1';
-    }
-    if (!/[?&]origin=/.test(newSrc)) {
-      newSrc += '&origin=' + encodeURIComponent(window.location.origin);
-    }
-    iframe.setAttribute('src', newSrc);
-    if (!iframe.id) iframe.id = 'yt-iframe-' + Math.random().toString(36).slice(2,9);
-    return true;
-  } catch (e) {
-    return false;
+function unmuteVideo(video) {
+  if (video.muted) {
+    video.muted = false;
+    video.play().catch(() => {
+      // Browser still blocked → keep muted
+      video.muted = true;
+    });
   }
 }
 
-export async function initAutoMuteVideos(options = {}) {
-  const threshold = options.threshold || 0.6;
+function muteVideo(video) {
+  if (!video.muted) video.muted = true;
+}
 
-  const players = new Map();
+function onFirstInteraction() {
+  if (userHasInteracted) return;
+  userHasInteracted = true;
 
-  const ytIframes = Array.from(document.querySelectorAll('iframe')).filter(ifr => (ifr.src || '').includes('youtube.com/embed'));
-  const handledYouTube = [];
-  ytIframes.forEach(ifr => {
-    if (ensureYouTubeIframe(ifr)) handledYouTube.push(ifr);
+  // Unmute every currently-visible video
+  trackedVideos.forEach(video => {
+    if (isVideoVisible(video)) {
+      unmuteVideo(video);
+    }
   });
 
-  const videos = Array.from(document.querySelectorAll('video'));
+  // Clean up listeners – only needed once
+  window.removeEventListener('click', onFirstInteraction, true);
+  window.removeEventListener('touchstart', onFirstInteraction, true);
+  window.removeEventListener('keydown', onFirstInteraction, true);
+}
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const el = entry.target;
-      const visible = entry.intersectionRatio >= threshold;
-      if (el.tagName === 'VIDEO') {
-        try {
-          if (visible) {
-            el.muted = false;
-            el.play().catch(() => {});
-          } else {
-            el.muted = true;
-          }
-        } catch (e) {}
-      } else if (el.tagName === 'IFRAME') {
-        const p = players.get(el.id);
-        if (p && typeof p.mute === 'function') {
-          try {
-            if (visible) {
-              p.unMute();
-              if (typeof p.playVideo === 'function') p.playVideo();
-            } else {
-              p.mute();
-            }
-          } catch (e) {}
-        } else {
-          // if player not ready yet, queue via dataset
-          el.dataset.autoplayPending = visible ? '1' : '0';
-        }
-      }
-    });
-  }, { threshold: [threshold] });
-
-  videos.forEach(v => {
-    // ensure muted by default to allow autoplay
-    v.muted = true;
-    observer.observe(v);
+function onScroll() {
+  trackedVideos.forEach(video => {
+    if (isVideoVisible(video)) {
+      if (userHasInteracted) unmuteVideo(video);
+    } else {
+      muteVideo(video);
+    }
   });
+}
 
-  // init YouTube players if any
-  if (handledYouTube.length > 0) {
-    const YT = await loadYouTubeAPI();
-    handledYouTube.forEach(ifr => {
-      try {
-        const player = new YT.Player(ifr.id, {});
-        players.set(ifr.id, player);
-        // observe iframe container
-        observer.observe(ifr);
-        // apply pending state
-        const pending = ifr.dataset.autoplayPending;
-        if (pending === '1') {
-          try { player.unMute(); player.playVideo(); } catch (e) {}
-        } else {
-          try { player.mute(); } catch (e) {}
-        }
-      } catch (e) {}
+function trackVideo(video) {
+  if (trackedVideos.has(video)) return;
+
+  // Ensure it starts muted & playing
+  video.muted = true;
+  video.autoplay = true;
+  video.playsInline = true;
+  video.loop = true;
+  video.play().catch(() => {});
+
+  trackedVideos.add(video);
+}
+
+export async function initAutoMuteVideos() {
+  // Grab all videos currently in the DOM
+  document.querySelectorAll('video').forEach(trackVideo);
+
+  // Watch for any videos added later (e.g. lazy-mounted React components)
+  const mutationObserver = new MutationObserver(mutations => {
+    mutations.forEach(m => {
+      m.addedNodes.forEach(node => {
+        if (node.nodeType !== 1) return;
+        if (node.tagName === 'VIDEO') trackVideo(node);
+        node.querySelectorAll?.('video').forEach(trackVideo);
+      });
     });
-  }
+  });
+  mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+  // First-interaction listeners (capture phase so they fire before anything else)
+  window.addEventListener('click', onFirstInteraction, { capture: true, passive: true });
+  window.addEventListener('touchstart', onFirstInteraction, { capture: true, passive: true });
+  window.addEventListener('keydown', onFirstInteraction, { capture: true, passive: true });
+
+  // Scroll-based muting
+  window.addEventListener('scroll', onScroll, { passive: true });
 }
 
 export default initAutoMuteVideos;
