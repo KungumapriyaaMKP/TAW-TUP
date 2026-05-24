@@ -189,10 +189,10 @@ const About = () => {
         </div>
 
         {/* Block C: Why Choose Toppers Academy (Features Grid) */}
-        <div className="about-pillars-section mb-5" style={{ background: '#f8fafc', padding: '4.5rem 3.5rem', border: '1px solid rgba(45, 52, 148, 0.04)' }}>
-          <div className="about-pillars-header text-center mb-5">
+        <div className="about-pillars-section mb-5" style={{ background: '#f8fafc', border: '1px solid rgba(45, 52, 148, 0.04)' }}>
+          <div className="about-pillars-header text-center mb-5" style={{ textAlign: 'center', width: '100%' }}>
             <span className="about-sub-label">WHY TOPPERS ACADEMY</span>
-            <h2>Why Students Choose TOPPERS ACADEMY Tiruppur</h2>
+            <h2 style={{ textAlign: 'center' }}>Why Students Choose TOPPERS ACADEMY Tiruppur</h2>
           </div>
           
           <div className="about-pillars-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.2rem' }}>

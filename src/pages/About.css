@@ -237,10 +237,16 @@
   border: 1px solid rgba(45, 52, 148, 0.04);
 }
 
+.about-pillars-header {
+  text-align: center;
+  width: 100%;
+}
+
 .about-pillars-header h2 {
   font-size: 2rem;
   color: var(--primary-blue);
   margin-top: 0.25rem;
+  text-align: center;
 }
 
 .about-pillars-grid {
