@@ -42,7 +42,7 @@ const About = () => {
     },
     {
       title: "Integrated 11th and 12th",
-      desc: "We offer integrated 11th and 12th programs focused on boards as well as competitive exams.",
+      desc: "We offer integrated 11th and 12th programs focused on boards as well as competitive exams. This comprehensive approach ensures a strong foundation in core subjects while seamlessly preparing students for NEET, JEE, and other exams, saving valuable time and maximizing results.",
       image: foundationCoursesImg
     },
     {
