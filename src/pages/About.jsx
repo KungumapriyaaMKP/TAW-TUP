@@ -41,8 +41,8 @@ const About = () => {
       image: mindDynamicsImg
     },
     {
-      title: "Foundation Courses",
-      desc: "We offer strong foundation programs for school students from lower classes aiming to build early preparation for NEET, JEE, Olympiads, and other competitive exams.",
+      title: "Integrated 11th and 12th",
+      desc: "We offer integrated 11th and 12th programs focused on boards as well as competitive exams.",
       image: foundationCoursesImg
     },
     {
