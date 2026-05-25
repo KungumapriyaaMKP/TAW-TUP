@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://toppersacademy.in/sitemap.xml
+Sitemap: https://toppersacademytup.com/sitemap.xml
