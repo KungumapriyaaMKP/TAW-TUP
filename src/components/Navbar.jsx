@@ -11,15 +11,15 @@ const Navbar = () => {
     <>
       <div className="top-bar">
         <div className="ticker-content">
-          <span className="ticker-item">ADMISSIONS OPEN FOR 2026 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
-          <span className="ticker-item">ADMISSIONS OPEN FOR 2026 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
-          <span className="ticker-item">ADMISSIONS OPEN FOR 2026 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
-          <span className="ticker-item">ADMISSIONS OPEN FOR 2026 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
+          <span className="ticker-item">ADMISSIONS OPEN FOR 2027 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
+          <span className="ticker-item">ADMISSIONS OPEN FOR 2027 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
+          <span className="ticker-item">ADMISSIONS OPEN FOR 2027 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
+          <span className="ticker-item">ADMISSIONS OPEN FOR 2027 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
           {/* Duplicate for seamless loop */}
-          <span className="ticker-item">ADMISSIONS OPEN FOR 2026 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
-          <span className="ticker-item">ADMISSIONS OPEN FOR 2026 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
-          <span className="ticker-item">ADMISSIONS OPEN FOR 2026 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
-          <span className="ticker-item">ADMISSIONS OPEN FOR 2026 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
+          <span className="ticker-item">ADMISSIONS OPEN FOR 2027 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
+          <span className="ticker-item">ADMISSIONS OPEN FOR 2027 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
+          <span className="ticker-item">ADMISSIONS OPEN FOR 2027 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
+          <span className="ticker-item">ADMISSIONS OPEN FOR 2027 &nbsp;•&nbsp; YEARLY INTAKE LIMITED TO 100 SEATS - FILLING FAST! &nbsp;•&nbsp; CONTACT: +91 97888 12111</span>
         </div>
       </div>
       <nav className="navbar">
